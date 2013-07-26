@@ -1,0 +1,744 @@
+stack@red:~/devstack$ cd /opt/stack/keystone && /opt/stack/keystone/bin/keystone -all --config-file /etc/keystone/keystone.conf --log-config /etc/keystone/loggin g.conf -d --debug || touch "/opt/stack/status/stack/key.failure"
+(keystone-all): 2013-07-26 00:48:45,393 DEBUG cfg log_opt_values ********************************************************************************
+(keystone-all): 2013-07-26 00:48:45,393 DEBUG cfg log_opt_values Configuration options gathered from:
+(keystone-all): 2013-07-26 00:48:45,393 DEBUG cfg log_opt_values command line args: None
+(keystone-all): 2013-07-26 00:48:45,393 DEBUG cfg log_opt_values config files: ['/etc/keystone/keystone.conf']
+(keystone-all): 2013-07-26 00:48:45,393 DEBUG cfg log_opt_values ================================================================================
+(keystone-all): 2013-07-26 00:48:45,393 DEBUG cfg log_opt_values admin_endpoint                 = http://localhost:%(admin_port)d/
+(keystone-all): 2013-07-26 00:48:45,394 DEBUG cfg log_opt_values admin_port                     = 35357
+(keystone-all): 2013-07-26 00:48:45,394 DEBUG cfg log_opt_values admin_token                    = aaa42ac7c4e7d7ab143d
+(keystone-all): 2013-07-26 00:48:45,394 DEBUG cfg log_opt_values auth_admin_prefix              = 
+(keystone-all): 2013-07-26 00:48:45,394 DEBUG cfg log_opt_values bind_host                      = 0.0.0.0
+(keystone-all): 2013-07-26 00:48:45,394 DEBUG cfg log_opt_values compute_port                   = 8774
+(keystone-all): 2013-07-26 00:48:45,394 DEBUG cfg log_opt_values config_dir                     = None
+(keystone-all): 2013-07-26 00:48:45,394 DEBUG cfg log_opt_values config_file                    = ['/etc/keystone/keystone.conf']
+(keystone-all): 2013-07-26 00:48:45,395 DEBUG cfg log_opt_values crypt_strength                 = 40000
+(keystone-all): 2013-07-26 00:48:45,395 DEBUG cfg log_opt_values debug                          = True
+(keystone-all): 2013-07-26 00:48:45,395 DEBUG cfg log_opt_values log_config                     = /etc/keystone/logging.conf
+(keystone-all): 2013-07-26 00:48:45,395 DEBUG cfg log_opt_values log_date_format                = %Y-%m-%d %H:%M:%S
+(keystone-all): 2013-07-26 00:48:45,395 DEBUG cfg log_opt_values log_dir                        = None
+(keystone-all): 2013-07-26 00:48:45,395 DEBUG cfg log_opt_values log_file                       = None
+(keystone-all): 2013-07-26 00:48:45,395 DEBUG cfg log_opt_values log_format                     = %(asctime)s %(levelname)8s [%(name)s] %(message)s
+(keystone-all): 2013-07-26 00:48:45,396 DEBUG cfg log_opt_values max_param_size                 = 64
+(keystone-all): 2013-07-26 00:48:45,396 DEBUG cfg log_opt_values max_request_body_size          = 114688
+(keystone-all): 2013-07-26 00:48:45,396 DEBUG cfg log_opt_values max_token_size                 = 8192
+(keystone-all): 2013-07-26 00:48:45,396 DEBUG cfg log_opt_values member_role_id                 = 9fe2ff9ee4384b1894a90878d3e92bab
+(keystone-all): 2013-07-26 00:48:45,396 DEBUG cfg log_opt_values member_role_name               = _member_
+(keystone-all): 2013-07-26 00:48:45,396 DEBUG cfg log_opt_values onready                        = None
+(keystone-all): 2013-07-26 00:48:45,396 DEBUG cfg log_opt_values policy_default_rule            = None
+(keystone-all): 2013-07-26 00:48:45,397 DEBUG cfg log_opt_values policy_file                    = policy.json
+(keystone-all): 2013-07-26 00:48:45,397 DEBUG cfg log_opt_values public_endpoint                = http://localhost:%(public_port)d/
+(keystone-all): 2013-07-26 00:48:45,397 DEBUG cfg log_opt_values public_port                    = 5000
+(keystone-all): 2013-07-26 00:48:45,397 DEBUG cfg log_opt_values pydev_debug_host               = None
+(keystone-all): 2013-07-26 00:48:45,397 DEBUG cfg log_opt_values pydev_debug_port               = None
+(keystone-all): 2013-07-26 00:48:45,397 DEBUG cfg log_opt_values standard_threads               = False
+(keystone-all): 2013-07-26 00:48:45,397 DEBUG cfg log_opt_values syslog_log_facility            = LOG_USER
+(keystone-all): 2013-07-26 00:48:45,398 DEBUG cfg log_opt_values use_syslog                     = False
+(keystone-all): 2013-07-26 00:48:45,398 DEBUG cfg log_opt_values verbose                        = False
+(keystone-all): 2013-07-26 00:48:45,398 DEBUG cfg log_opt_values signing.ca_certs               = /etc/keystone/ssl/certs/ca.pem
+(keystone-all): 2013-07-26 00:48:45,398 DEBUG cfg log_opt_values signing.ca_password            = None
+(keystone-all): 2013-07-26 00:48:45,398 DEBUG cfg log_opt_values signing.certfile               = /etc/keystone/ssl/certs/signing_cert.pem
+(keystone-all): 2013-07-26 00:48:45,398 DEBUG cfg log_opt_values signing.key_size               = 1024
+(keystone-all): 2013-07-26 00:48:45,398 DEBUG cfg log_opt_values signing.keyfile                = /etc/keystone/ssl/private/signing_key.pem
+(keystone-all): 2013-07-26 00:48:45,399 DEBUG cfg log_opt_values signing.token_format           = PKI
+(keystone-all): 2013-07-26 00:48:45,399 DEBUG cfg log_opt_values signing.valid_days             = 3650
+(keystone-all): 2013-07-26 00:48:45,399 DEBUG cfg log_opt_values stats.driver                   = keystone.contrib.stats.backends.kvs.Stats
+(keystone-all): 2013-07-26 00:48:45,399 DEBUG cfg log_opt_values ldap.allow_subtree_delete      = False
+(keystone-all): 2013-07-26 00:48:45,399 DEBUG cfg log_opt_values ldap.dumb_member               = cn=dumb,dc=nonexistent
+(keystone-all): 2013-07-26 00:48:45,399 DEBUG cfg log_opt_values ldap.group_allow_create        = True
+(keystone-all): 2013-07-26 00:48:45,400 DEBUG cfg log_opt_values ldap.group_allow_delete        = True
+(keystone-all): 2013-07-26 00:48:45,400 DEBUG cfg log_opt_values ldap.group_allow_update        = True
+(keystone-all): 2013-07-26 00:48:45,400 DEBUG cfg log_opt_values ldap.group_attribute_ignore    = 
+(keystone-all): 2013-07-26 00:48:45,400 DEBUG cfg log_opt_values ldap.group_desc_attribute      = description
+(keystone-all): 2013-07-26 00:48:45,400 DEBUG cfg log_opt_values ldap.group_domain_id_attribute = domain_id
+(keystone-all): 2013-07-26 00:48:45,400 DEBUG cfg log_opt_values ldap.group_filter              = None
+(keystone-all): 2013-07-26 00:48:45,400 DEBUG cfg log_opt_values ldap.group_id_attribute        = cn
+(keystone-all): 2013-07-26 00:48:45,401 DEBUG cfg log_opt_values ldap.group_member_attribute    = member
+(keystone-all): 2013-07-26 00:48:45,401 DEBUG cfg log_opt_values ldap.group_name_attribute      = ou
+(keystone-all): 2013-07-26 00:48:45,401 DEBUG cfg log_opt_values ldap.group_objectclass         = groupOfNames
+(keystone-all): 2013-07-26 00:48:45,401 DEBUG cfg log_opt_values ldap.group_tree_dn             = None
+(keystone-all): 2013-07-26 00:48:45,401 DEBUG cfg log_opt_values ldap.password                  = None
+(keystone-all): 2013-07-26 00:48:45,401 DEBUG cfg log_opt_values ldap.query_scope               = one
+(keystone-all): 2013-07-26 00:48:45,402 DEBUG cfg log_opt_values ldap.role_allow_create         = True
+(keystone-all): 2013-07-26 00:48:45,402 DEBUG cfg log_opt_values ldap.role_allow_delete         = True
+(keystone-all): 2013-07-26 00:48:45,402 DEBUG cfg log_opt_values ldap.role_allow_update         = True
+(keystone-all): 2013-07-26 00:48:45,402 DEBUG cfg log_opt_values ldap.role_attribute_ignore     = 
+(keystone-all): 2013-07-26 00:48:45,402 DEBUG cfg log_opt_values ldap.role_filter               = None
+(keystone-all): 2013-07-26 00:48:45,402 DEBUG cfg log_opt_values ldap.role_id_attribute         = cn
+(keystone-all): 2013-07-26 00:48:45,402 DEBUG cfg log_opt_values ldap.role_member_attribute     = roleOccupant
+(keystone-all): 2013-07-26 00:48:45,403 DEBUG cfg log_opt_values ldap.role_name_attribute       = ou
+(keystone-all): 2013-07-26 00:48:45,403 DEBUG cfg log_opt_values ldap.role_objectclass          = organizationalRole
+(keystone-all): 2013-07-26 00:48:45,403 DEBUG cfg log_opt_values ldap.role_tree_dn              = None
+(keystone-all): 2013-07-26 00:48:45,403 DEBUG cfg log_opt_values ldap.suffix                    = cn=example,cn=com
+(keystone-all): 2013-07-26 00:48:45,403 DEBUG cfg log_opt_values ldap.tenant_allow_create       = True
+(keystone-all): 2013-07-26 00:48:45,403 DEBUG cfg log_opt_values ldap.tenant_allow_delete       = True
+(keystone-all): 2013-07-26 00:48:45,404 DEBUG cfg log_opt_values ldap.tenant_allow_update       = True
+(keystone-all): 2013-07-26 00:48:45,404 DEBUG cfg log_opt_values ldap.tenant_attribute_ignore   = 
+(keystone-all): 2013-07-26 00:48:45,404 DEBUG cfg log_opt_values ldap.tenant_desc_attribute     = description
+(keystone-all): 2013-07-26 00:48:45,404 DEBUG cfg log_opt_values ldap.tenant_domain_id_attribute = businessCategory
+(keystone-all): 2013-07-26 00:48:45,404 DEBUG cfg log_opt_values ldap.tenant_enabled_attribute  = enabled
+(keystone-all): 2013-07-26 00:48:45,404 DEBUG cfg log_opt_values ldap.tenant_enabled_emulation  = False
+(keystone-all): 2013-07-26 00:48:45,404 DEBUG cfg log_opt_values ldap.tenant_enabled_emulation_dn = None
+(keystone-all): 2013-07-26 00:48:45,405 DEBUG cfg log_opt_values ldap.tenant_filter             = None
+(keystone-all): 2013-07-26 00:48:45,405 DEBUG cfg log_opt_values ldap.tenant_id_attribute       = cn
+(keystone-all): 2013-07-26 00:48:45,405 DEBUG cfg log_opt_values ldap.tenant_member_attribute   = member
+(keystone-all): 2013-07-26 00:48:45,405 DEBUG cfg log_opt_values ldap.tenant_name_attribute     = ou
+(keystone-all): 2013-07-26 00:48:45,405 DEBUG cfg log_opt_values ldap.tenant_objectclass        = groupOfNames
+(keystone-all): 2013-07-26 00:48:45,405 DEBUG cfg log_opt_values ldap.tenant_tree_dn            = None
+(keystone-all): 2013-07-26 00:48:45,405 DEBUG cfg log_opt_values ldap.url                       = ldap://localhost
+(keystone-all): 2013-07-26 00:48:45,406 DEBUG cfg log_opt_values ldap.use_dumb_member           = False
+(keystone-all): 2013-07-26 00:48:45,406 DEBUG cfg log_opt_values ldap.user                      = None
+(keystone-all): 2013-07-26 00:48:45,406 DEBUG cfg log_opt_values ldap.user_allow_create         = True
+(keystone-all): 2013-07-26 00:48:45,406 DEBUG cfg log_opt_values ldap.user_allow_delete         = True
+(keystone-all): 2013-07-26 00:48:45,406 DEBUG cfg log_opt_values ldap.user_allow_update         = True
+(keystone-all): 2013-07-26 00:48:45,406 DEBUG cfg log_opt_values ldap.user_attribute_ignore     = tenant_id,tenants
+(keystone-all): 2013-07-26 00:48:45,407 DEBUG cfg log_opt_values ldap.user_domain_id_attribute  = businessCategory
+(keystone-all): 2013-07-26 00:48:45,407 DEBUG cfg log_opt_values ldap.user_enabled_attribute    = enabled
+(keystone-all): 2013-07-26 00:48:45,407 DEBUG cfg log_opt_values ldap.user_enabled_default      = True
+(keystone-all): 2013-07-26 00:48:45,407 DEBUG cfg log_opt_values ldap.user_enabled_emulation    = False
+(keystone-all): 2013-07-26 00:48:45,407 DEBUG cfg log_opt_values ldap.user_enabled_emulation_dn = None
+(keystone-all): 2013-07-26 00:48:45,407 DEBUG cfg log_opt_values ldap.user_enabled_mask         = 0
+(keystone-all): 2013-07-26 00:48:45,408 DEBUG cfg log_opt_values ldap.user_filter               = None
+(keystone-all): 2013-07-26 00:48:45,408 DEBUG cfg log_opt_values ldap.user_id_attribute         = cn
+(keystone-all): 2013-07-26 00:48:45,408 DEBUG cfg log_opt_values ldap.user_mail_attribute       = email
+(keystone-all): 2013-07-26 00:48:45,408 DEBUG cfg log_opt_values ldap.user_name_attribute       = sn
+(keystone-all): 2013-07-26 00:48:45,408 DEBUG cfg log_opt_values ldap.user_objectclass          = inetOrgPerson
+(keystone-all): 2013-07-26 00:48:45,408 DEBUG cfg log_opt_values ldap.user_pass_attribute       = userPassword
+(keystone-all): 2013-07-26 00:48:45,409 DEBUG cfg log_opt_values ldap.user_tree_dn              = None
+(keystone-all): 2013-07-26 00:48:45,409 DEBUG cfg log_opt_values token.driver                   = keystone.token.backends.sql.Token
+(keystone-all): 2013-07-26 00:48:45,409 DEBUG cfg log_opt_values auth.methods                   = ['password', 'token']
+(keystone-all): 2013-07-26 00:48:45,409 DEBUG cfg log_opt_values auth.password                  = keystone.auth.methods.password.Password
+(keystone-all): 2013-07-26 00:48:45,409 DEBUG cfg log_opt_values auth.token                     = keystone.auth.methods.token.Token
+(keystone-all): 2013-07-26 00:48:45,409 DEBUG cfg log_opt_values ssl.ca_certs                   = None
+(keystone-all): 2013-07-26 00:48:45,410 DEBUG cfg log_opt_values ssl.cert_required              = False
+(keystone-all): 2013-07-26 00:48:45,410 DEBUG cfg log_opt_values ssl.certfile                   = None
+(keystone-all): 2013-07-26 00:48:45,410 DEBUG cfg log_opt_values ssl.enable                     = False
+(keystone-all): 2013-07-26 00:48:45,410 DEBUG cfg log_opt_values ssl.keyfile                    = None
+(keystone-all): 2013-07-26 00:48:45,410 DEBUG cfg log_opt_values catalog.driver                 = keystone.catalog.backends.sql.Catalog
+(keystone-all): 2013-07-26 00:48:45,410 DEBUG cfg log_opt_values ec2.driver                     = keystone.contrib.ec2.backends.sql.Ec2
+(keystone-all): 2013-07-26 00:48:45,410 DEBUG cfg log_opt_values sql.connection                 = mysql://root:anhuaxili@localhost/keystone?charset=utf8
+(keystone-all): 2013-07-26 00:48:45,411 DEBUG cfg log_opt_values sql.idle_timeout               = 200
+(keystone-all): 2013-07-26 00:48:45,411 DEBUG cfg log_opt_values policy.driver                  = keystone.policy.backends.sql.Policy
+(keystone-all): 2013-07-26 00:48:45,411 DEBUG cfg log_opt_values pam.password                   = None
+(keystone-all): 2013-07-26 00:48:45,411 DEBUG cfg log_opt_values pam.url                        = None
+(keystone-all): 2013-07-26 00:48:45,411 DEBUG cfg log_opt_values pam.userid                     = None
+(keystone-all): 2013-07-26 00:48:45,411 DEBUG cfg log_opt_values identity.default_domain_id     = default
+(keystone-all): 2013-07-26 00:48:45,412 DEBUG cfg log_opt_values identity.driver                = keystone.identity.backends.sql.Identity
+(keystone-all): 2013-07-26 00:48:45,412 DEBUG cfg log_opt_values ********************************************************************************
+(keystone.auth.controllers): 2013-07-26 00:48:45,446 WARNING controllers <module> duplicate option: password
+(keystone.auth.controllers): 2013-07-26 00:48:45,446 WARNING controllers <module> duplicate option: token
+(eventlet.wsgi.server): 2013-07-26 00:48:45,700 DEBUG wsgi write (21370) wsgi starting up on http://0.0.0.0:35357/
+
+(eventlet.wsgi.server): 2013-07-26 00:48:45,700 DEBUG wsgi write (21370) wsgi starting up on http://0.0.0.0:5000/
+
+(eventlet.wsgi.server): 2013-07-26 00:48:46,075 DEBUG wsgi write (21370) accepted ('129.127.10.133', 51192)
+
+(access): 2013-07-26 00:48:46,088 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:46 +0000] "GET http://129.127.10.133:5000/v2.0/ HTTP/1.0" 200 610
+(eventlet.wsgi.server): 2013-07-26 00:48:46,088 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:46] "GET /v2.0/ HTTP/1.1" 200 739 0.012897
+
+(eventlet.wsgi.server): 2013-07-26 00:48:46,395 DEBUG wsgi write (21370) accepted ('129.127.10.133', 39876)
+
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:703: SADeprecationWarning: The 'listeners' argument to Pool (and create_engine()) is deprecated.  Use event.listen().
+  Pool.__init__(self, creator, **kw)
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:160: SADeprecationWarning: Pool.add_listener is deprecated.  Use event.listen()
+  self.add_listener(l)
+(root): 2013-07-26 00:48:46,432 ERROR wsgi __call__ (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+Traceback (most recent call last):
+  File "/opt/stack/keystone/keystone/common/wsgi.py", line 231, in __call__
+    result = method(context, **params)
+  File "/opt/stack/keystone/keystone/identity/controllers.py", line 105, in create_project
+    self._normalize_domain_id(context, tenant_ref))
+  File "/opt/stack/keystone/keystone/common/manager.py", line 47, in _wrapper
+    return f(*args, **kw)
+  File "/opt/stack/keystone/keystone/common/sql/core.py", line 272, in wrapper
+    return method(*args, **kwargs)
+  File "/opt/stack/keystone/keystone/identity/backends/sql.py", line 491, in create_project
+    session.flush()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 45, in save_obj
+    uowtransaction)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 138, in _organize_states_for_save
+    states):
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 759, in _connections_for_states
+    base_mapper)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 233, in connection
+    return self._connection_for_bind(engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 295, in _connection_for_bind
+    conn = self._parent._connection_for_bind(bind)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 306, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2489, in contextual_connect
+    self.pool.connect(),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 236, in connect
+    return _ConnectionFairy(self).checkout()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 401, in __init__
+    rec = self._connection_record = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 746, in _do_get
+    con = self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 189, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 282, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 344, in __connect
+    connection = self.__pool._creator()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 80, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 281, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+(access): 2013-07-26 00:48:46,437 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:46 +0000] "POST http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 500 248
+(eventlet.wsgi.server): 2013-07-26 00:48:46,438 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:46] "POST /v2.0/tenants HTTP/1.1" 500 396 0.042132
+
+(eventlet.wsgi.server): 2013-07-26 00:48:46,778 DEBUG wsgi write (21370) accepted ('129.127.10.133', 39877)
+
+(root): 2013-07-26 00:48:47,009 ERROR wsgi __call__ (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+Traceback (most recent call last):
+  File "/opt/stack/keystone/keystone/common/wsgi.py", line 231, in __call__
+    result = method(context, **params)
+  File "/opt/stack/keystone/keystone/identity/controllers.py", line 207, in create_user
+    context, user_id, user_ref)
+  File "/opt/stack/keystone/keystone/common/manager.py", line 47, in _wrapper
+    return f(*args, **kw)
+  File "/opt/stack/keystone/keystone/common/sql/core.py", line 272, in wrapper
+    return method(*args, **kwargs)
+  File "/opt/stack/keystone/keystone/identity/backends/sql.py", line 689, in create_user
+    session.flush()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 45, in save_obj
+    uowtransaction)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 138, in _organize_states_for_save
+    states):
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 759, in _connections_for_states
+    base_mapper)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 233, in connection
+    return self._connection_for_bind(engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 295, in _connection_for_bind
+    conn = self._parent._connection_for_bind(bind)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 306, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2489, in contextual_connect
+    self.pool.connect(),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 236, in connect
+    return _ConnectionFairy(self).checkout()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 401, in __init__
+    rec = self._connection_record = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 746, in _do_get
+    con = self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 189, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 282, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 344, in __connect
+    connection = self.__pool._creator()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 80, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 281, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+(access): 2013-07-26 00:48:47,012 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:47 +0000] "POST http://129.127.10.133:35357/v2.0/users HTTP/1.0" 500 248
+(eventlet.wsgi.server): 2013-07-26 00:48:47,012 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:47] "POST /v2.0/users HTTP/1.1" 500 396 0.234201
+
+(eventlet.wsgi.server): 2013-07-26 00:48:47,330 DEBUG wsgi write (21370) accepted ('129.127.10.133', 39878)
+
+(root): 2013-07-26 00:48:47,336 ERROR wsgi __call__ (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+Traceback (most recent call last):
+  File "/opt/stack/keystone/keystone/common/wsgi.py", line 231, in __call__
+    result = method(context, **params)
+  File "/opt/stack/keystone/keystone/identity/controllers.py", line 284, in create_role
+    role_ref = self.identity_api.create_role(context, role_id, role)
+  File "/opt/stack/keystone/keystone/common/manager.py", line 47, in _wrapper
+    return f(*args, **kw)
+  File "/opt/stack/keystone/keystone/common/sql/core.py", line 272, in wrapper
+    return method(*args, **kwargs)
+  File "/opt/stack/keystone/keystone/identity/backends/sql.py", line 963, in create_role
+    session.flush()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 45, in save_obj
+    uowtransaction)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 138, in _organize_states_for_save
+    states):
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 759, in _connections_for_states
+    base_mapper)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 233, in connection
+    return self._connection_for_bind(engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 295, in _connection_for_bind
+    conn = self._parent._connection_for_bind(bind)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 306, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2489, in contextual_connect
+    self.pool.connect(),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 236, in connect
+    return _ConnectionFairy(self).checkout()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 401, in __init__
+    rec = self._connection_record = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 746, in _do_get
+    con = self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 189, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 282, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 344, in __connect
+    connection = self.__pool._creator()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 80, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 281, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+(access): 2013-07-26 00:48:47,339 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:47 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 500 248
+(eventlet.wsgi.server): 2013-07-26 00:48:47,339 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:47] "POST /v2.0/OS-KSADM/roles HTTP/1.1" 500 396 0.008503
+
+(eventlet.wsgi.server): 2013-07-26 00:48:47,994 DEBUG wsgi write (21370) accepted ('129.127.10.133', 39879)
+
+(root): 2013-07-26 00:48:47,999 ERROR wsgi __call__ (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+Traceback (most recent call last):
+  File "/opt/stack/keystone/keystone/common/wsgi.py", line 231, in __call__
+    result = method(context, **params)
+  File "/opt/stack/keystone/keystone/identity/controllers.py", line 105, in create_project
+    self._normalize_domain_id(context, tenant_ref))
+  File "/opt/stack/keystone/keystone/common/manager.py", line 47, in _wrapper
+    return f(*args, **kw)
+  File "/opt/stack/keystone/keystone/common/sql/core.py", line 272, in wrapper
+    return method(*args, **kwargs)
+  File "/opt/stack/keystone/keystone/identity/backends/sql.py", line 491, in create_project
+    session.flush()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 45, in save_obj
+    uowtransaction)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 138, in _organize_states_for_save
+    states):
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 759, in _connections_for_states
+    base_mapper)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 233, in connection
+    return self._connection_for_bind(engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 295, in _connection_for_bind
+    conn = self._parent._connection_for_bind(bind)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 306, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2489, in contextual_connect
+    self.pool.connect(),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 236, in connect
+    return _ConnectionFairy(self).checkout()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 401, in __init__
+    rec = self._connection_record = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 746, in _do_get
+    con = self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 189, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 282, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 344, in __connect
+    connection = self.__pool._creator()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 80, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 281, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+(access): 2013-07-26 00:48:48,001 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:48 +0000] "POST http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 500 248
+(eventlet.wsgi.server): 2013-07-26 00:48:48,002 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:48] "POST /v2.0/tenants HTTP/1.1" 500 396 0.007479
+
+(eventlet.wsgi.server): 2013-07-26 00:48:48,355 DEBUG wsgi write (21370) accepted ('129.127.10.133', 39880)
+
+(root): 2013-07-26 00:48:48,360 ERROR wsgi __call__ (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+Traceback (most recent call last):
+  File "/opt/stack/keystone/keystone/common/wsgi.py", line 231, in __call__
+    result = method(context, **params)
+  File "/opt/stack/keystone/keystone/identity/controllers.py", line 284, in create_role
+    role_ref = self.identity_api.create_role(context, role_id, role)
+  File "/opt/stack/keystone/keystone/common/manager.py", line 47, in _wrapper
+    return f(*args, **kw)
+  File "/opt/stack/keystone/keystone/common/sql/core.py", line 272, in wrapper
+    return method(*args, **kwargs)
+  File "/opt/stack/keystone/keystone/identity/backends/sql.py", line 963, in create_role
+    session.flush()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 45, in save_obj
+    uowtransaction)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 138, in _organize_states_for_save
+    states):
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 759, in _connections_for_states
+    base_mapper)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 233, in connection
+    return self._connection_for_bind(engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 295, in _connection_for_bind
+    conn = self._parent._connection_for_bind(bind)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 306, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2489, in contextual_connect
+    self.pool.connect(),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 236, in connect
+    return _ConnectionFairy(self).checkout()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 401, in __init__
+    rec = self._connection_record = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 746, in _do_get
+    con = self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 189, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 282, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 344, in __connect
+    connection = self.__pool._creator()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 80, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 281, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+(access): 2013-07-26 00:48:48,363 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:48 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 500 248
+(eventlet.wsgi.server): 2013-07-26 00:48:48,364 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:48] "POST /v2.0/OS-KSADM/roles HTTP/1.1" 500 396 0.008013
+
+(eventlet.wsgi.server): 2013-07-26 00:48:48,723 DEBUG wsgi write (21370) accepted ('129.127.10.133', 39881)
+
+(root): 2013-07-26 00:48:48,729 ERROR wsgi __call__ (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+Traceback (most recent call last):
+  File "/opt/stack/keystone/keystone/common/wsgi.py", line 231, in __call__
+    result = method(context, **params)
+  File "/opt/stack/keystone/keystone/identity/controllers.py", line 284, in create_role
+    role_ref = self.identity_api.create_role(context, role_id, role)
+  File "/opt/stack/keystone/keystone/common/manager.py", line 47, in _wrapper
+    return f(*args, **kw)
+  File "/opt/stack/keystone/keystone/common/sql/core.py", line 272, in wrapper
+    return method(*args, **kwargs)
+  File "/opt/stack/keystone/keystone/identity/backends/sql.py", line 963, in create_role
+    session.flush()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 45, in save_obj
+    uowtransaction)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 138, in _organize_states_for_save
+    states):
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 759, in _connections_for_states
+    base_mapper)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 233, in connection
+    return self._connection_for_bind(engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 295, in _connection_for_bind
+    conn = self._parent._connection_for_bind(bind)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 306, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2489, in contextual_connect
+    self.pool.connect(),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 236, in connect
+    return _ConnectionFairy(self).checkout()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 401, in __init__
+    rec = self._connection_record = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 746, in _do_get
+    con = self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 189, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 282, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 344, in __connect
+    connection = self.__pool._creator()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 80, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 281, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+(access): 2013-07-26 00:48:48,731 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:48 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 500 248
+(eventlet.wsgi.server): 2013-07-26 00:48:48,732 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:48] "POST /v2.0/OS-KSADM/roles HTTP/1.1" 500 396 0.008046
+
+(eventlet.wsgi.server): 2013-07-26 00:48:49,044 DEBUG wsgi write (21370) accepted ('129.127.10.133', 39882)
+
+(root): 2013-07-26 00:48:49,049 ERROR wsgi __call__ (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+Traceback (most recent call last):
+  File "/opt/stack/keystone/keystone/common/wsgi.py", line 231, in __call__
+    result = method(context, **params)
+  File "/opt/stack/keystone/keystone/identity/controllers.py", line 105, in create_project
+    self._normalize_domain_id(context, tenant_ref))
+  File "/opt/stack/keystone/keystone/common/manager.py", line 47, in _wrapper
+    return f(*args, **kw)
+  File "/opt/stack/keystone/keystone/common/sql/core.py", line 272, in wrapper
+    return method(*args, **kwargs)
+  File "/opt/stack/keystone/keystone/identity/backends/sql.py", line 491, in create_project
+    session.flush()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 45, in save_obj
+    uowtransaction)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 138, in _organize_states_for_save
+    states):
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 759, in _connections_for_states
+    base_mapper)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 233, in connection
+    return self._connection_for_bind(engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 295, in _connection_for_bind
+    conn = self._parent._connection_for_bind(bind)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 306, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2489, in contextual_connect
+    self.pool.connect(),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 236, in connect
+    return _ConnectionFairy(self).checkout()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 401, in __init__
+    rec = self._connection_record = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 746, in _do_get
+    con = self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 189, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 282, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 344, in __connect
+    connection = self.__pool._creator()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 80, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 281, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+(access): 2013-07-26 00:48:49,052 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:49 +0000] "POST http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 500 248
+(eventlet.wsgi.server): 2013-07-26 00:48:49,052 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:49] "POST /v2.0/tenants HTTP/1.1" 500 396 0.007993
+
+(eventlet.wsgi.server): 2013-07-26 00:48:49,354 DEBUG wsgi write (21370) accepted ('129.127.10.133', 39883)
+
+(root): 2013-07-26 00:48:49,358 ERROR wsgi __call__ (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+Traceback (most recent call last):
+  File "/opt/stack/keystone/keystone/common/wsgi.py", line 231, in __call__
+    result = method(context, **params)
+  File "/opt/stack/keystone/keystone/identity/controllers.py", line 105, in create_project
+    self._normalize_domain_id(context, tenant_ref))
+  File "/opt/stack/keystone/keystone/common/manager.py", line 47, in _wrapper
+    return f(*args, **kw)
+  File "/opt/stack/keystone/keystone/common/sql/core.py", line 272, in wrapper
+    return method(*args, **kwargs)
+  File "/opt/stack/keystone/keystone/identity/backends/sql.py", line 491, in create_project
+    session.flush()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 45, in save_obj
+    uowtransaction)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 138, in _organize_states_for_save
+    states):
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 759, in _connections_for_states
+    base_mapper)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 233, in connection
+    return self._connection_for_bind(engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 295, in _connection_for_bind
+    conn = self._parent._connection_for_bind(bind)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 306, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2489, in contextual_connect
+    self.pool.connect(),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 236, in connect
+    return _ConnectionFairy(self).checkout()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 401, in __init__
+    rec = self._connection_record = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 746, in _do_get
+    con = self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 189, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 282, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 344, in __connect
+    connection = self.__pool._creator()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 80, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 281, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+(access): 2013-07-26 00:48:49,360 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:49 +0000] "POST http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 500 248
+(eventlet.wsgi.server): 2013-07-26 00:48:49,361 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:49] "POST /v2.0/tenants HTTP/1.1" 500 396 0.005842
+
+(eventlet.wsgi.server): 2013-07-26 00:48:49,715 DEBUG wsgi write (21370) accepted ('129.127.10.133', 39884)
+
+(root): 2013-07-26 00:48:49,898 ERROR wsgi __call__ (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+Traceback (most recent call last):
+  File "/opt/stack/keystone/keystone/common/wsgi.py", line 231, in __call__
+    result = method(context, **params)
+  File "/opt/stack/keystone/keystone/identity/controllers.py", line 207, in create_user
+    context, user_id, user_ref)
+  File "/opt/stack/keystone/keystone/common/manager.py", line 47, in _wrapper
+    return f(*args, **kw)
+  File "/opt/stack/keystone/keystone/common/sql/core.py", line 272, in wrapper
+    return method(*args, **kwargs)
+  File "/opt/stack/keystone/keystone/identity/backends/sql.py", line 689, in create_user
+    session.flush()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 45, in save_obj
+    uowtransaction)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 138, in _organize_states_for_save
+    states):
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 759, in _connections_for_states
+    base_mapper)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 233, in connection
+    return self._connection_for_bind(engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 295, in _connection_for_bind
+    conn = self._parent._connection_for_bind(bind)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 306, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2489, in contextual_connect
+    self.pool.connect(),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 236, in connect
+    return _ConnectionFairy(self).checkout()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 401, in __init__
+    rec = self._connection_record = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 746, in _do_get
+    con = self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 189, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 282, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 344, in __connect
+    connection = self.__pool._creator()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 80, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 281, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+(access): 2013-07-26 00:48:49,900 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:49 +0000] "POST http://129.127.10.133:35357/v2.0/users HTTP/1.0" 500 248
+(eventlet.wsgi.server): 2013-07-26 00:48:49,900 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:49] "POST /v2.0/users HTTP/1.1" 500 396 0.185145
+
+(eventlet.wsgi.server): 2013-07-26 00:48:51,505 DEBUG wsgi write (21370) accepted ('129.127.10.133', 39885)
+
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:703: SADeprecationWarning: The 'listeners' argument to Pool (and create_engine()) is deprecated.  Use event.listen().
+  Pool.__init__(self, creator, **kw)
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:160: SADeprecationWarning: Pool.add_listener is deprecated.  Use event.listen()
+  self.add_listener(l)
+(root): 2013-07-26 00:48:51,511 ERROR wsgi __call__ (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+Traceback (most recent call last):
+  File "/opt/stack/keystone/keystone/common/wsgi.py", line 231, in __call__
+    result = method(context, **params)
+  File "/opt/stack/keystone/keystone/catalog/controllers.py", line 50, in create_service
+    context, service_id, service_ref)
+  File "/opt/stack/keystone/keystone/common/manager.py", line 47, in _wrapper
+    return f(*args, **kw)
+  File "/opt/stack/keystone/keystone/catalog/backends/sql.py", line 83, in create_service
+    session.flush()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1718, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 1789, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 331, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/unitofwork.py", line 475, in execute
+    uow
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 45, in save_obj
+    uowtransaction)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 138, in _organize_states_for_save
+    states):
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/persistence.py", line 759, in _connections_for_states
+    base_mapper)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 233, in connection
+    return self._connection_for_bind(engine)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 295, in _connection_for_bind
+    conn = self._parent._connection_for_bind(bind)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 306, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 2489, in contextual_connect
+    self.pool.connect(),
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 236, in connect
+    return _ConnectionFairy(self).checkout()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 401, in __init__
+    rec = self._connection_record = pool._do_get()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 746, in _do_get
+    con = self._create_connection()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 189, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 282, in __init__
+    self.connection = self.__connect()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 344, in __connect
+    connection = self.__pool._creator()
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 80, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 281, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") None None
+(access): 2013-07-26 00:48:51,514 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:18:51 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/services HTTP/1.0" 500 248
+(eventlet.wsgi.server): 2013-07-26 00:48:51,515 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:48:51] "POST /v2.0/OS-KSADM/services HTTP/1.1" 500 396 0.009544
+

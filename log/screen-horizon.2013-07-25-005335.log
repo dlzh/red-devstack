@@ -1,0 +1,1 @@
+stack@red:~/devstack$ cd /opt/stack/horizon && sudo tail -f /var/log/apache2/hor izon_error.log || touch "/opt/stack/status/stack/horizon.failure"

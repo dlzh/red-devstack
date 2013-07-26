@@ -1,0 +1,7 @@
+stack.sh log /home/stack/devstack/log/stack.sh.log.2013-07-26-004542
+Installing package prerequisites
+Installing OpenStack project source
+Configuring OpenStack projects
+Starting RabbitMQ
+Configuring and starting MySQL
+Starting Keystone

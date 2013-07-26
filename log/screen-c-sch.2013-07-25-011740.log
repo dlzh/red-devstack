@@ -1,0 +1,4 @@
+stack@red:~/devstack$ cd /opt/stack/cinder && /opt/stack/cinder/bin/cinder-sched uler --config-file /etc/cinder/cinder.conf || touch "/opt/stack/status/stack/c-s ch.failure"
+2013-07-25 01:20:44.337 [01;36mAUDIT cinder.service [[00;36m-[01;36m] [01;35m[01;36mStarting cinder-scheduler node (version 2013.1)[00m
+2013-07-25 01:20:44.381 [00;36mINFO cinder.openstack.common.rpc.common [[00;36m-[00;36m] [01;35m[00;36mConnected to AMQP server on localhost:5672[00m
+2013-07-25 01:20:44.662 [00;36mINFO cinder.openstack.common.rpc.common [[00;36m-[00;36m] [01;35m[00;36mConnected to AMQP server on localhost:5672[00m

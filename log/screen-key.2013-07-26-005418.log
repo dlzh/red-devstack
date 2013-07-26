@@ -1,0 +1,1046 @@
+stack@red:~/devstack$ cd /opt/stack/keystone && /opt/stack/keystone/bin/keystone -all --config-file /etc/keystone/keystone.conf --log-config /etc/keystone/loggin g.conf -d --debug || touch "/opt/stack/status/stack/key.failure"
+(keystone-all): 2013-07-26 00:54:49,908 DEBUG cfg log_opt_values ********************************************************************************
+(keystone-all): 2013-07-26 00:54:49,909 DEBUG cfg log_opt_values Configuration options gathered from:
+(keystone-all): 2013-07-26 00:54:49,909 DEBUG cfg log_opt_values command line args: None
+(keystone-all): 2013-07-26 00:54:49,909 DEBUG cfg log_opt_values config files: ['/etc/keystone/keystone.conf']
+(keystone-all): 2013-07-26 00:54:49,909 DEBUG cfg log_opt_values ================================================================================
+(keystone-all): 2013-07-26 00:54:49,909 DEBUG cfg log_opt_values admin_endpoint                 = http://localhost:%(admin_port)d/
+(keystone-all): 2013-07-26 00:54:49,909 DEBUG cfg log_opt_values admin_port                     = 35357
+(keystone-all): 2013-07-26 00:54:49,909 DEBUG cfg log_opt_values admin_token                    = aaa42ac7c4e7d7ab143d
+(keystone-all): 2013-07-26 00:54:49,909 DEBUG cfg log_opt_values auth_admin_prefix              = 
+(keystone-all): 2013-07-26 00:54:49,909 DEBUG cfg log_opt_values bind_host                      = 0.0.0.0
+(keystone-all): 2013-07-26 00:54:49,909 DEBUG cfg log_opt_values compute_port                   = 8774
+(keystone-all): 2013-07-26 00:54:49,910 DEBUG cfg log_opt_values config_dir                     = None
+(keystone-all): 2013-07-26 00:54:49,910 DEBUG cfg log_opt_values config_file                    = ['/etc/keystone/keystone.conf']
+(keystone-all): 2013-07-26 00:54:49,910 DEBUG cfg log_opt_values crypt_strength                 = 40000
+(keystone-all): 2013-07-26 00:54:49,910 DEBUG cfg log_opt_values debug                          = True
+(keystone-all): 2013-07-26 00:54:49,910 DEBUG cfg log_opt_values log_config                     = /etc/keystone/logging.conf
+(keystone-all): 2013-07-26 00:54:49,910 DEBUG cfg log_opt_values log_date_format                = %Y-%m-%d %H:%M:%S
+(keystone-all): 2013-07-26 00:54:49,910 DEBUG cfg log_opt_values log_dir                        = None
+(keystone-all): 2013-07-26 00:54:49,910 DEBUG cfg log_opt_values log_file                       = None
+(keystone-all): 2013-07-26 00:54:49,910 DEBUG cfg log_opt_values log_format                     = %(asctime)s %(levelname)8s [%(name)s] %(message)s
+(keystone-all): 2013-07-26 00:54:49,910 DEBUG cfg log_opt_values max_param_size                 = 64
+(keystone-all): 2013-07-26 00:54:49,911 DEBUG cfg log_opt_values max_request_body_size          = 114688
+(keystone-all): 2013-07-26 00:54:49,911 DEBUG cfg log_opt_values max_token_size                 = 8192
+(keystone-all): 2013-07-26 00:54:49,911 DEBUG cfg log_opt_values member_role_id                 = 9fe2ff9ee4384b1894a90878d3e92bab
+(keystone-all): 2013-07-26 00:54:49,911 DEBUG cfg log_opt_values member_role_name               = _member_
+(keystone-all): 2013-07-26 00:54:49,911 DEBUG cfg log_opt_values onready                        = None
+(keystone-all): 2013-07-26 00:54:49,911 DEBUG cfg log_opt_values policy_default_rule            = None
+(keystone-all): 2013-07-26 00:54:49,911 DEBUG cfg log_opt_values policy_file                    = policy.json
+(keystone-all): 2013-07-26 00:54:49,911 DEBUG cfg log_opt_values public_endpoint                = http://localhost:%(public_port)d/
+(keystone-all): 2013-07-26 00:54:49,911 DEBUG cfg log_opt_values public_port                    = 5000
+(keystone-all): 2013-07-26 00:54:49,912 DEBUG cfg log_opt_values pydev_debug_host               = None
+(keystone-all): 2013-07-26 00:54:49,912 DEBUG cfg log_opt_values pydev_debug_port               = None
+(keystone-all): 2013-07-26 00:54:49,912 DEBUG cfg log_opt_values standard_threads               = False
+(keystone-all): 2013-07-26 00:54:49,912 DEBUG cfg log_opt_values syslog_log_facility            = LOG_USER
+(keystone-all): 2013-07-26 00:54:49,912 DEBUG cfg log_opt_values use_syslog                     = False
+(keystone-all): 2013-07-26 00:54:49,912 DEBUG cfg log_opt_values verbose                        = False
+(keystone-all): 2013-07-26 00:54:49,912 DEBUG cfg log_opt_values signing.ca_certs               = /etc/keystone/ssl/certs/ca.pem
+(keystone-all): 2013-07-26 00:54:49,912 DEBUG cfg log_opt_values signing.ca_password            = None
+(keystone-all): 2013-07-26 00:54:49,912 DEBUG cfg log_opt_values signing.certfile               = /etc/keystone/ssl/certs/signing_cert.pem
+(keystone-all): 2013-07-26 00:54:49,913 DEBUG cfg log_opt_values signing.key_size               = 1024
+(keystone-all): 2013-07-26 00:54:49,913 DEBUG cfg log_opt_values signing.keyfile                = /etc/keystone/ssl/private/signing_key.pem
+(keystone-all): 2013-07-26 00:54:49,913 DEBUG cfg log_opt_values signing.token_format           = PKI
+(keystone-all): 2013-07-26 00:54:49,913 DEBUG cfg log_opt_values signing.valid_days             = 3650
+(keystone-all): 2013-07-26 00:54:49,913 DEBUG cfg log_opt_values stats.driver                   = keystone.contrib.stats.backends.kvs.Stats
+(keystone-all): 2013-07-26 00:54:49,913 DEBUG cfg log_opt_values ldap.allow_subtree_delete      = False
+(keystone-all): 2013-07-26 00:54:49,913 DEBUG cfg log_opt_values ldap.dumb_member               = cn=dumb,dc=nonexistent
+(keystone-all): 2013-07-26 00:54:49,913 DEBUG cfg log_opt_values ldap.group_allow_create        = True
+(keystone-all): 2013-07-26 00:54:49,914 DEBUG cfg log_opt_values ldap.group_allow_delete        = True
+(keystone-all): 2013-07-26 00:54:49,914 DEBUG cfg log_opt_values ldap.group_allow_update        = True
+(keystone-all): 2013-07-26 00:54:49,914 DEBUG cfg log_opt_values ldap.group_attribute_ignore    = 
+(keystone-all): 2013-07-26 00:54:49,914 DEBUG cfg log_opt_values ldap.group_desc_attribute      = description
+(keystone-all): 2013-07-26 00:54:49,914 DEBUG cfg log_opt_values ldap.group_domain_id_attribute = domain_id
+(keystone-all): 2013-07-26 00:54:49,914 DEBUG cfg log_opt_values ldap.group_filter              = None
+(keystone-all): 2013-07-26 00:54:49,914 DEBUG cfg log_opt_values ldap.group_id_attribute        = cn
+(keystone-all): 2013-07-26 00:54:49,914 DEBUG cfg log_opt_values ldap.group_member_attribute    = member
+(keystone-all): 2013-07-26 00:54:49,914 DEBUG cfg log_opt_values ldap.group_name_attribute      = ou
+(keystone-all): 2013-07-26 00:54:49,915 DEBUG cfg log_opt_values ldap.group_objectclass         = groupOfNames
+(keystone-all): 2013-07-26 00:54:49,915 DEBUG cfg log_opt_values ldap.group_tree_dn             = None
+(keystone-all): 2013-07-26 00:54:49,915 DEBUG cfg log_opt_values ldap.password                  = None
+(keystone-all): 2013-07-26 00:54:49,915 DEBUG cfg log_opt_values ldap.query_scope               = one
+(keystone-all): 2013-07-26 00:54:49,915 DEBUG cfg log_opt_values ldap.role_allow_create         = True
+(keystone-all): 2013-07-26 00:54:49,915 DEBUG cfg log_opt_values ldap.role_allow_delete         = True
+(keystone-all): 2013-07-26 00:54:49,915 DEBUG cfg log_opt_values ldap.role_allow_update         = True
+(keystone-all): 2013-07-26 00:54:49,915 DEBUG cfg log_opt_values ldap.role_attribute_ignore     = 
+(keystone-all): 2013-07-26 00:54:49,915 DEBUG cfg log_opt_values ldap.role_filter               = None
+(keystone-all): 2013-07-26 00:54:49,916 DEBUG cfg log_opt_values ldap.role_id_attribute         = cn
+(keystone-all): 2013-07-26 00:54:49,916 DEBUG cfg log_opt_values ldap.role_member_attribute     = roleOccupant
+(keystone-all): 2013-07-26 00:54:49,916 DEBUG cfg log_opt_values ldap.role_name_attribute       = ou
+(keystone-all): 2013-07-26 00:54:49,916 DEBUG cfg log_opt_values ldap.role_objectclass          = organizationalRole
+(keystone-all): 2013-07-26 00:54:49,916 DEBUG cfg log_opt_values ldap.role_tree_dn              = None
+(keystone-all): 2013-07-26 00:54:49,916 DEBUG cfg log_opt_values ldap.suffix                    = cn=example,cn=com
+(keystone-all): 2013-07-26 00:54:49,916 DEBUG cfg log_opt_values ldap.tenant_allow_create       = True
+(keystone-all): 2013-07-26 00:54:49,916 DEBUG cfg log_opt_values ldap.tenant_allow_delete       = True
+(keystone-all): 2013-07-26 00:54:49,916 DEBUG cfg log_opt_values ldap.tenant_allow_update       = True
+(keystone-all): 2013-07-26 00:54:49,917 DEBUG cfg log_opt_values ldap.tenant_attribute_ignore   = 
+(keystone-all): 2013-07-26 00:54:49,917 DEBUG cfg log_opt_values ldap.tenant_desc_attribute     = description
+(keystone-all): 2013-07-26 00:54:49,917 DEBUG cfg log_opt_values ldap.tenant_domain_id_attribute = businessCategory
+(keystone-all): 2013-07-26 00:54:49,917 DEBUG cfg log_opt_values ldap.tenant_enabled_attribute  = enabled
+(keystone-all): 2013-07-26 00:54:49,917 DEBUG cfg log_opt_values ldap.tenant_enabled_emulation  = False
+(keystone-all): 2013-07-26 00:54:49,917 DEBUG cfg log_opt_values ldap.tenant_enabled_emulation_dn = None
+(keystone-all): 2013-07-26 00:54:49,917 DEBUG cfg log_opt_values ldap.tenant_filter             = None
+(keystone-all): 2013-07-26 00:54:49,917 DEBUG cfg log_opt_values ldap.tenant_id_attribute       = cn
+(keystone-all): 2013-07-26 00:54:49,917 DEBUG cfg log_opt_values ldap.tenant_member_attribute   = member
+(keystone-all): 2013-07-26 00:54:49,918 DEBUG cfg log_opt_values ldap.tenant_name_attribute     = ou
+(keystone-all): 2013-07-26 00:54:49,918 DEBUG cfg log_opt_values ldap.tenant_objectclass        = groupOfNames
+(keystone-all): 2013-07-26 00:54:49,918 DEBUG cfg log_opt_values ldap.tenant_tree_dn            = None
+(keystone-all): 2013-07-26 00:54:49,918 DEBUG cfg log_opt_values ldap.url                       = ldap://localhost
+(keystone-all): 2013-07-26 00:54:49,918 DEBUG cfg log_opt_values ldap.use_dumb_member           = False
+(keystone-all): 2013-07-26 00:54:49,918 DEBUG cfg log_opt_values ldap.user                      = None
+(keystone-all): 2013-07-26 00:54:49,918 DEBUG cfg log_opt_values ldap.user_allow_create         = True
+(keystone-all): 2013-07-26 00:54:49,918 DEBUG cfg log_opt_values ldap.user_allow_delete         = True
+(keystone-all): 2013-07-26 00:54:49,918 DEBUG cfg log_opt_values ldap.user_allow_update         = True
+(keystone-all): 2013-07-26 00:54:49,919 DEBUG cfg log_opt_values ldap.user_attribute_ignore     = tenant_id,tenants
+(keystone-all): 2013-07-26 00:54:49,919 DEBUG cfg log_opt_values ldap.user_domain_id_attribute  = businessCategory
+(keystone-all): 2013-07-26 00:54:49,919 DEBUG cfg log_opt_values ldap.user_enabled_attribute    = enabled
+(keystone-all): 2013-07-26 00:54:49,919 DEBUG cfg log_opt_values ldap.user_enabled_default      = True
+(keystone-all): 2013-07-26 00:54:49,919 DEBUG cfg log_opt_values ldap.user_enabled_emulation    = False
+(keystone-all): 2013-07-26 00:54:49,919 DEBUG cfg log_opt_values ldap.user_enabled_emulation_dn = None
+(keystone-all): 2013-07-26 00:54:49,919 DEBUG cfg log_opt_values ldap.user_enabled_mask         = 0
+(keystone-all): 2013-07-26 00:54:49,919 DEBUG cfg log_opt_values ldap.user_filter               = None
+(keystone-all): 2013-07-26 00:54:49,920 DEBUG cfg log_opt_values ldap.user_id_attribute         = cn
+(keystone-all): 2013-07-26 00:54:49,920 DEBUG cfg log_opt_values ldap.user_mail_attribute       = email
+(keystone-all): 2013-07-26 00:54:49,920 DEBUG cfg log_opt_values ldap.user_name_attribute       = sn
+(keystone-all): 2013-07-26 00:54:49,920 DEBUG cfg log_opt_values ldap.user_objectclass          = inetOrgPerson
+(keystone-all): 2013-07-26 00:54:49,920 DEBUG cfg log_opt_values ldap.user_pass_attribute       = userPassword
+(keystone-all): 2013-07-26 00:54:49,920 DEBUG cfg log_opt_values ldap.user_tree_dn              = None
+(keystone-all): 2013-07-26 00:54:49,920 DEBUG cfg log_opt_values token.driver                   = keystone.token.backends.sql.Token
+(keystone-all): 2013-07-26 00:54:49,920 DEBUG cfg log_opt_values auth.methods                   = ['password', 'token']
+(keystone-all): 2013-07-26 00:54:49,920 DEBUG cfg log_opt_values auth.password                  = keystone.auth.methods.password.Password
+(keystone-all): 2013-07-26 00:54:49,921 DEBUG cfg log_opt_values auth.token                     = keystone.auth.methods.token.Token
+(keystone-all): 2013-07-26 00:54:49,921 DEBUG cfg log_opt_values ssl.ca_certs                   = None
+(keystone-all): 2013-07-26 00:54:49,921 DEBUG cfg log_opt_values ssl.cert_required              = False
+(keystone-all): 2013-07-26 00:54:49,921 DEBUG cfg log_opt_values ssl.certfile                   = None
+(keystone-all): 2013-07-26 00:54:49,921 DEBUG cfg log_opt_values ssl.enable                     = False
+(keystone-all): 2013-07-26 00:54:49,921 DEBUG cfg log_opt_values ssl.keyfile                    = None
+(keystone-all): 2013-07-26 00:54:49,921 DEBUG cfg log_opt_values catalog.driver                 = keystone.catalog.backends.sql.Catalog
+(keystone-all): 2013-07-26 00:54:49,921 DEBUG cfg log_opt_values ec2.driver                     = keystone.contrib.ec2.backends.sql.Ec2
+(keystone-all): 2013-07-26 00:54:49,922 DEBUG cfg log_opt_values sql.connection                 = mysql://root:anhuaxili@localhost/keystone?charset=utf8
+(keystone-all): 2013-07-26 00:54:49,922 DEBUG cfg log_opt_values sql.idle_timeout               = 200
+(keystone-all): 2013-07-26 00:54:49,922 DEBUG cfg log_opt_values policy.driver                  = keystone.policy.backends.sql.Policy
+(keystone-all): 2013-07-26 00:54:49,922 DEBUG cfg log_opt_values pam.password                   = None
+(keystone-all): 2013-07-26 00:54:49,922 DEBUG cfg log_opt_values pam.url                        = None
+(keystone-all): 2013-07-26 00:54:49,922 DEBUG cfg log_opt_values pam.userid                     = None
+(keystone-all): 2013-07-26 00:54:49,922 DEBUG cfg log_opt_values identity.default_domain_id     = default
+(keystone-all): 2013-07-26 00:54:49,922 DEBUG cfg log_opt_values identity.driver                = keystone.identity.backends.sql.Identity
+(keystone-all): 2013-07-26 00:54:49,922 DEBUG cfg log_opt_values ********************************************************************************
+(keystone.auth.controllers): 2013-07-26 00:54:49,949 WARNING controllers <module> duplicate option: password
+(keystone.auth.controllers): 2013-07-26 00:54:49,949 WARNING controllers <module> duplicate option: token
+(eventlet.wsgi.server): 2013-07-26 00:54:50,203 DEBUG wsgi write (30703) wsgi starting up on http://0.0.0.0:35357/
+
+(eventlet.wsgi.server): 2013-07-26 00:54:50,203 DEBUG wsgi write (30703) wsgi starting up on http://0.0.0.0:5000/
+
+(eventlet.wsgi.server): 2013-07-26 00:54:50,675 DEBUG wsgi write (30703) accepted ('129.127.10.133', 51205)
+
+(access): 2013-07-26 00:54:50,688 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:50 +0000] "GET http://129.127.10.133:5000/v2.0/ HTTP/1.0" 200 610
+(eventlet.wsgi.server): 2013-07-26 00:54:50,689 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:50] "GET /v2.0/ HTTP/1.1" 200 739 0.012575
+
+(eventlet.wsgi.server): 2013-07-26 00:54:50,995 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39889)
+
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:703: SADeprecationWarning: The 'listeners' argument to Pool (and create_engine()) is deprecated.  Use event.listen().
+  Pool.__init__(self, creator, **kw)
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:160: SADeprecationWarning: Pool.add_listener is deprecated.  Use event.listen()
+  self.add_listener(l)
+(access): 2013-07-26 00:54:51,090 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:51 +0000] "POST http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 200 109
+(eventlet.wsgi.server): 2013-07-26 00:54:51,090 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:51] "POST /v2.0/tenants HTTP/1.1" 200 238 0.095115
+
+(eventlet.wsgi.server): 2013-07-26 00:54:51,450 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39890)
+
+(access): 2013-07-26 00:54:51,690 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:51 +0000] "POST http://129.127.10.133:35357/v2.0/users HTTP/1.0" 200 134
+(eventlet.wsgi.server): 2013-07-26 00:54:51,691 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:51] "POST /v2.0/users HTTP/1.1" 200 263 0.240445
+
+(eventlet.wsgi.server): 2013-07-26 00:54:52,031 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39891)
+
+(access): 2013-07-26 00:54:52,091 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:52 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:54:52,091 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:52] "POST /v2.0/OS-KSADM/roles HTTP/1.1" 200 197 0.059087
+
+(eventlet.wsgi.server): 2013-07-26 00:54:52,418 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39892)
+
+(access): 2013-07-26 00:54:52,429 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:52 +0000] "GET http://129.127.10.133:35357/v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842 HTTP/1.0" 200 134
+(eventlet.wsgi.server): 2013-07-26 00:54:52,430 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:52] "GET /v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842 HTTP/1.1" 200 263 0.010745
+
+(eventlet.wsgi.server): 2013-07-26 00:54:52,443 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39893)
+
+(access): 2013-07-26 00:54:52,451 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:52 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles/78833ac95510457a8f9003571c2ec97c HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:54:52,451 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:52] "GET /v2.0/OS-KSADM/roles/78833ac95510457a8f9003571c2ec97c HTTP/1.1" 200 197 0.007706
+
+(eventlet.wsgi.server): 2013-07-26 00:54:52,453 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39894)
+
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:703: SADeprecationWarning: The 'listeners' argument to Pool (and create_engine()) is deprecated.  Use event.listen().
+  Pool.__init__(self, creator, **kw)
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:160: SADeprecationWarning: Pool.add_listener is deprecated.  Use event.listen()
+  self.add_listener(l)
+(access): 2013-07-26 00:54:52,529 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:52 +0000] "PUT http://129.127.10.133:35357/v2.0/tenants/3f149d674b28434c99cd049c1c44fff8/users/4b505d0a4c3445b9ba9e6d7a77c0b842/roles/OS-KSADM/78833ac95510457a8f9003571c2ec97c HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:54:52,530 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:52] "PUT /v2.0/tenants/3f149d674b28434c99cd049c1c44fff8/users/4b505d0a4c3445b9ba9e6d7a77c0b842/roles/OS-KSADM/78833ac95510457a8f9003571c2ec97c HTTP/1.1" 200 197 0.076165
+
+(eventlet.wsgi.server): 2013-07-26 00:54:52,864 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39895)
+
+(access): 2013-07-26 00:54:52,930 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:52 +0000] "POST http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 200 111
+(eventlet.wsgi.server): 2013-07-26 00:54:52,930 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:52] "POST /v2.0/tenants HTTP/1.1" 200 240 0.065843
+
+(eventlet.wsgi.server): 2013-07-26 00:54:53,237 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39896)
+
+(access): 2013-07-26 00:54:53,300 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:53 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 200 70
+(eventlet.wsgi.server): 2013-07-26 00:54:53,300 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:53] "POST /v2.0/OS-KSADM/roles HTTP/1.1" 200 198 0.063122
+
+(eventlet.wsgi.server): 2013-07-26 00:54:53,640 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39897)
+
+(access): 2013-07-26 00:54:53,700 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:53 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 200 75
+(eventlet.wsgi.server): 2013-07-26 00:54:53,701 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:53] "POST /v2.0/OS-KSADM/roles HTTP/1.1" 200 203 0.059823
+
+(eventlet.wsgi.server): 2013-07-26 00:54:54,056 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39898)
+
+(access): 2013-07-26 00:54:54,117 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:54 +0000] "POST http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 200 122
+(eventlet.wsgi.server): 2013-07-26 00:54:54,117 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:54] "POST /v2.0/tenants HTTP/1.1" 200 251 0.060689
+
+(eventlet.wsgi.server): 2013-07-26 00:54:54,442 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39899)
+
+(access): 2013-07-26 00:54:54,509 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:54 +0000] "POST http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 200 108
+(eventlet.wsgi.server): 2013-07-26 00:54:54,510 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:54] "POST /v2.0/tenants HTTP/1.1" 200 237 0.066812
+
+(eventlet.wsgi.server): 2013-07-26 00:54:54,847 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39900)
+
+(access): 2013-07-26 00:54:55,076 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:55 +0000] "POST http://129.127.10.133:35357/v2.0/users HTTP/1.0" 200 132
+(eventlet.wsgi.server): 2013-07-26 00:54:55,077 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:55] "POST /v2.0/users HTTP/1.1" 200 261 0.229008
+
+(eventlet.wsgi.server): 2013-07-26 00:54:55,438 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39901)
+
+(access): 2013-07-26 00:54:55,446 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:55 +0000] "GET http://129.127.10.133:35357/v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2 HTTP/1.0" 200 132
+(eventlet.wsgi.server): 2013-07-26 00:54:55,447 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:55] "GET /v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2 HTTP/1.1" 200 261 0.008031
+
+(eventlet.wsgi.server): 2013-07-26 00:54:55,460 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39902)
+
+(access): 2013-07-26 00:54:55,467 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:55 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.0" 200 70
+(eventlet.wsgi.server): 2013-07-26 00:54:55,468 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:55] "GET /v2.0/OS-KSADM/roles/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.1" 200 198 0.007433
+
+(eventlet.wsgi.server): 2013-07-26 00:54:55,470 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39903)
+
+(access): 2013-07-26 00:54:55,538 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:55 +0000] "PUT http://129.127.10.133:35357/v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45/users/c9ea51b608a34159ac0d0895bf5d8cf2/roles/OS-KSADM/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.0" 200 70
+(eventlet.wsgi.server): 2013-07-26 00:54:55,538 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:55] "PUT /v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45/users/c9ea51b608a34159ac0d0895bf5d8cf2/roles/OS-KSADM/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.1" 200 198 0.067178
+
+(eventlet.wsgi.server): 2013-07-26 00:54:55,832 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39904)
+
+(access): 2013-07-26 00:54:55,840 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:55 +0000] "GET http://129.127.10.133:35357/v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842 HTTP/1.0" 200 134
+(eventlet.wsgi.server): 2013-07-26 00:54:55,841 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:55] "GET /v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842 HTTP/1.1" 200 263 0.007665
+
+(eventlet.wsgi.server): 2013-07-26 00:54:55,854 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39905)
+
+(access): 2013-07-26 00:54:55,861 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:55 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles/78833ac95510457a8f9003571c2ec97c HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:54:55,861 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:55] "GET /v2.0/OS-KSADM/roles/78833ac95510457a8f9003571c2ec97c HTTP/1.1" 200 197 0.006515
+
+(eventlet.wsgi.server): 2013-07-26 00:54:55,863 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39906)
+
+(access): 2013-07-26 00:54:55,929 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:55 +0000] "PUT http://129.127.10.133:35357/v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45/users/4b505d0a4c3445b9ba9e6d7a77c0b842/roles/OS-KSADM/78833ac95510457a8f9003571c2ec97c HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:54:55,930 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:55] "PUT /v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45/users/4b505d0a4c3445b9ba9e6d7a77c0b842/roles/OS-KSADM/78833ac95510457a8f9003571c2ec97c HTTP/1.1" 200 197 0.066169
+
+(eventlet.wsgi.server): 2013-07-26 00:54:56,274 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39907)
+
+(access): 2013-07-26 00:54:56,283 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:56 +0000] "GET http://129.127.10.133:35357/v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2 HTTP/1.0" 200 132
+(eventlet.wsgi.server): 2013-07-26 00:54:56,283 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:56] "GET /v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2 HTTP/1.1" 200 261 0.008191
+
+(eventlet.wsgi.server): 2013-07-26 00:54:56,296 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39908)
+
+(access): 2013-07-26 00:54:56,304 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:56 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles/c2d43a528d22402197f8f5ed8c834dd9 HTTP/1.0" 200 75
+(eventlet.wsgi.server): 2013-07-26 00:54:56,304 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:56] "GET /v2.0/OS-KSADM/roles/c2d43a528d22402197f8f5ed8c834dd9 HTTP/1.1" 200 203 0.007402
+
+(eventlet.wsgi.server): 2013-07-26 00:54:56,307 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39909)
+
+(access): 2013-07-26 00:54:56,372 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:56 +0000] "PUT http://129.127.10.133:35357/v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45/users/c9ea51b608a34159ac0d0895bf5d8cf2/roles/OS-KSADM/c2d43a528d22402197f8f5ed8c834dd9 HTTP/1.0" 200 75
+(eventlet.wsgi.server): 2013-07-26 00:54:56,373 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:56] "PUT /v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45/users/c9ea51b608a34159ac0d0895bf5d8cf2/roles/OS-KSADM/c2d43a528d22402197f8f5ed8c834dd9 HTTP/1.1" 200 203 0.065116
+
+(eventlet.wsgi.server): 2013-07-26 00:54:56,671 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39910)
+
+(access): 2013-07-26 00:54:56,679 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:56 +0000] "GET http://129.127.10.133:35357/v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2 HTTP/1.0" 200 132
+(eventlet.wsgi.server): 2013-07-26 00:54:56,679 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:56] "GET /v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2 HTTP/1.1" 200 261 0.008147
+
+(eventlet.wsgi.server): 2013-07-26 00:54:56,693 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39911)
+
+(access): 2013-07-26 00:54:56,700 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:56 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.0" 200 70
+(eventlet.wsgi.server): 2013-07-26 00:54:56,700 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:56] "GET /v2.0/OS-KSADM/roles/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.1" 200 198 0.006990
+
+(eventlet.wsgi.server): 2013-07-26 00:54:56,703 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39912)
+
+(access): 2013-07-26 00:54:56,763 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:56 +0000] "PUT http://129.127.10.133:35357/v2.0/tenants/76e5d7d0341242aeadb83513df23ff71/users/c9ea51b608a34159ac0d0895bf5d8cf2/roles/OS-KSADM/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.0" 200 70
+(eventlet.wsgi.server): 2013-07-26 00:54:56,764 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:56] "PUT /v2.0/tenants/76e5d7d0341242aeadb83513df23ff71/users/c9ea51b608a34159ac0d0895bf5d8cf2/roles/OS-KSADM/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.1" 200 198 0.060069
+
+(eventlet.wsgi.server): 2013-07-26 00:54:57,101 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39913)
+
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:703: SADeprecationWarning: The 'listeners' argument to Pool (and create_engine()) is deprecated.  Use event.listen().
+  Pool.__init__(self, creator, **kw)
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:160: SADeprecationWarning: Pool.add_listener is deprecated.  Use event.listen()
+  self.add_listener(l)
+(access): 2013-07-26 00:54:57,161 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:57 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/services HTTP/1.0" 200 148
+(eventlet.wsgi.server): 2013-07-26 00:54:57,161 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:57] "POST /v2.0/OS-KSADM/services HTTP/1.1" 200 277 0.059415
+
+(eventlet.wsgi.server): 2013-07-26 00:54:57,520 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39914)
+
+(access): 2013-07-26 00:54:57,636 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:57 +0000] "POST http://129.127.10.133:35357/v2.0/endpoints HTTP/1.0" 200 275
+(eventlet.wsgi.server): 2013-07-26 00:54:57,637 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:57] "POST /v2.0/endpoints HTTP/1.1" 200 404 0.115603
+
+(eventlet.wsgi.server): 2013-07-26 00:54:57,986 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39915)
+
+(access): 2013-07-26 00:54:57,994 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:57 +0000] "GET http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 200 444
+(eventlet.wsgi.server): 2013-07-26 00:54:57,995 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:57] "GET /v2.0/tenants HTTP/1.1" 200 573 0.007748
+
+(eventlet.wsgi.server): 2013-07-26 00:54:58,310 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39916)
+
+(access): 2013-07-26 00:54:58,317 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:58 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 200 338
+(eventlet.wsgi.server): 2013-07-26 00:54:58,318 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:58] "GET /v2.0/OS-KSADM/roles HTTP/1.1" 200 467 0.007276
+
+(eventlet.wsgi.server): 2013-07-26 00:54:58,671 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39917)
+
+(access): 2013-07-26 00:54:58,928 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:58 +0000] "POST http://129.127.10.133:35357/v2.0/users HTTP/1.0" 200 162
+(eventlet.wsgi.server): 2013-07-26 00:54:58,929 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:58] "POST /v2.0/users HTTP/1.1" 200 291 0.257077
+
+(eventlet.wsgi.server): 2013-07-26 00:54:59,283 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39918)
+
+(access): 2013-07-26 00:54:59,291 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:59 +0000] "GET http://129.127.10.133:35357/v2.0/users/549ae2116f944b72b80270a35025dfcb HTTP/1.0" 200 162
+(eventlet.wsgi.server): 2013-07-26 00:54:59,292 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:59] "GET /v2.0/users/549ae2116f944b72b80270a35025dfcb HTTP/1.1" 200 291 0.008013
+
+(eventlet.wsgi.server): 2013-07-26 00:54:59,305 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39919)
+
+(access): 2013-07-26 00:54:59,312 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:59 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles/78833ac95510457a8f9003571c2ec97c HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:54:59,313 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:59] "GET /v2.0/OS-KSADM/roles/78833ac95510457a8f9003571c2ec97c HTTP/1.1" 200 197 0.007454
+
+(eventlet.wsgi.server): 2013-07-26 00:54:59,315 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39920)
+
+(access): 2013-07-26 00:54:59,366 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:59 +0000] "PUT http://129.127.10.133:35357/v2.0/tenants/b4dd7d98e2764e1f9a1c488ca895959e/users/549ae2116f944b72b80270a35025dfcb/roles/OS-KSADM/78833ac95510457a8f9003571c2ec97c HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:54:59,366 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:59] "PUT /v2.0/tenants/b4dd7d98e2764e1f9a1c488ca895959e/users/549ae2116f944b72b80270a35025dfcb/roles/OS-KSADM/78833ac95510457a8f9003571c2ec97c HTTP/1.1" 200 197 0.050383
+
+(eventlet.wsgi.server): 2013-07-26 00:54:59,697 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39921)
+
+(access): 2013-07-26 00:54:59,746 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:24:59 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/services HTTP/1.0" 200 138
+(eventlet.wsgi.server): 2013-07-26 00:54:59,746 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:54:59] "POST /v2.0/OS-KSADM/services HTTP/1.1" 200 267 0.049150
+
+(eventlet.wsgi.server): 2013-07-26 00:55:00,089 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39922)
+
+(access): 2013-07-26 00:55:00,221 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:00 +0000] "POST http://129.127.10.133:35357/v2.0/endpoints HTTP/1.0" 200 310
+(eventlet.wsgi.server): 2013-07-26 00:55:00,222 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:00] "POST /v2.0/endpoints HTTP/1.1" 200 439 0.132620
+
+(eventlet.wsgi.server): 2013-07-26 00:55:00,569 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39923)
+
+(access): 2013-07-26 00:55:00,577 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:00 +0000] "GET http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 200 444
+(eventlet.wsgi.server): 2013-07-26 00:55:00,577 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:00] "GET /v2.0/tenants HTTP/1.1" 200 573 0.007492
+
+(eventlet.wsgi.server): 2013-07-26 00:55:00,920 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39924)
+
+(access): 2013-07-26 00:55:00,927 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:00 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 200 338
+(eventlet.wsgi.server): 2013-07-26 00:55:00,928 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:00] "GET /v2.0/OS-KSADM/roles HTTP/1.1" 200 467 0.006911
+
+(eventlet.wsgi.server): 2013-07-26 00:55:01,229 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39925)
+
+(access): 2013-07-26 00:55:01,564 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:01 +0000] "POST http://129.127.10.133:35357/v2.0/users HTTP/1.0" 200 166
+(eventlet.wsgi.server): 2013-07-26 00:55:01,565 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:01] "POST /v2.0/users HTTP/1.1" 200 295 0.335128
+
+(eventlet.wsgi.server): 2013-07-26 00:55:01,908 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39926)
+
+(access): 2013-07-26 00:55:01,917 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:01 +0000] "GET http://129.127.10.133:35357/v2.0/users/4d3ec0924eaf4f649610c4a7a7c66cdc HTTP/1.0" 200 166
+(eventlet.wsgi.server): 2013-07-26 00:55:01,918 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:01] "GET /v2.0/users/4d3ec0924eaf4f649610c4a7a7c66cdc HTTP/1.1" 200 295 0.008657
+
+(eventlet.wsgi.server): 2013-07-26 00:55:01,931 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39927)
+
+(access): 2013-07-26 00:55:01,938 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:01 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles/78833ac95510457a8f9003571c2ec97c HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:55:01,938 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:01] "GET /v2.0/OS-KSADM/roles/78833ac95510457a8f9003571c2ec97c HTTP/1.1" 200 197 0.006983
+
+(eventlet.wsgi.server): 2013-07-26 00:55:01,941 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39928)
+
+(access): 2013-07-26 00:55:02,002 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:02 +0000] "PUT http://129.127.10.133:35357/v2.0/tenants/b4dd7d98e2764e1f9a1c488ca895959e/users/4d3ec0924eaf4f649610c4a7a7c66cdc/roles/OS-KSADM/78833ac95510457a8f9003571c2ec97c HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:55:02,002 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:02] "PUT /v2.0/tenants/b4dd7d98e2764e1f9a1c488ca895959e/users/4d3ec0924eaf4f649610c4a7a7c66cdc/roles/OS-KSADM/78833ac95510457a8f9003571c2ec97c HTTP/1.1" 200 197 0.060452
+
+(eventlet.wsgi.server): 2013-07-26 00:55:02,339 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39929)
+
+(access): 2013-07-26 00:55:02,382 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:02 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/services HTTP/1.0" 200 140
+(eventlet.wsgi.server): 2013-07-26 00:55:02,383 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:02] "POST /v2.0/OS-KSADM/services HTTP/1.1" 200 269 0.043611
+
+(eventlet.wsgi.server): 2013-07-26 00:55:02,725 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39930)
+
+(access): 2013-07-26 00:55:02,891 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:02 +0000] "POST http://129.127.10.133:35357/v2.0/endpoints HTTP/1.0" 200 310
+(eventlet.wsgi.server): 2013-07-26 00:55:02,892 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:02] "POST /v2.0/endpoints HTTP/1.1" 200 439 0.165832
+
+(eventlet.wsgi.server): 2013-07-26 00:55:03,260 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39931)
+
+(access): 2013-07-26 00:55:03,268 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:03 +0000] "GET http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 200 444
+(eventlet.wsgi.server): 2013-07-26 00:55:03,268 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:03] "GET /v2.0/tenants HTTP/1.1" 200 573 0.007412
+
+(eventlet.wsgi.server): 2013-07-26 00:55:03,577 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39932)
+
+(access): 2013-07-26 00:55:03,584 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:03 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 200 338
+(eventlet.wsgi.server): 2013-07-26 00:55:03,585 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:03] "GET /v2.0/OS-KSADM/roles HTTP/1.1" 200 467 0.006896
+
+(eventlet.wsgi.server): 2013-07-26 00:55:03,936 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39933)
+
+(access): 2013-07-26 00:55:03,943 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:03 +0000] "GET http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 200 444
+(eventlet.wsgi.server): 2013-07-26 00:55:03,944 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:03] "GET /v2.0/tenants HTTP/1.1" 200 573 0.007355
+
+(eventlet.wsgi.server): 2013-07-26 00:55:04,256 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39934)
+
+(access): 2013-07-26 00:55:04,263 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:04 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 200 338
+(eventlet.wsgi.server): 2013-07-26 00:55:04,264 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:04] "GET /v2.0/OS-KSADM/roles HTTP/1.1" 200 467 0.006835
+
+(eventlet.wsgi.server): 2013-07-26 00:55:04,573 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39935)
+
+(access): 2013-07-26 00:55:04,580 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:04 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 200 338
+(eventlet.wsgi.server): 2013-07-26 00:55:04,581 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:04] "GET /v2.0/OS-KSADM/roles HTTP/1.1" 200 467 0.006905
+
+(eventlet.wsgi.server): 2013-07-26 00:55:04,882 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39936)
+
+(access): 2013-07-26 00:55:04,934 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:04 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/roles HTTP/1.0" 200 77
+(eventlet.wsgi.server): 2013-07-26 00:55:04,934 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:04] "POST /v2.0/OS-KSADM/roles HTTP/1.1" 200 205 0.051185
+
+(eventlet.wsgi.server): 2013-07-26 00:55:05,271 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39937)
+
+(access): 2013-07-26 00:55:05,550 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:05 +0000] "POST http://129.127.10.133:35357/v2.0/users HTTP/1.0" 200 166
+(eventlet.wsgi.server): 2013-07-26 00:55:05,551 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:05] "POST /v2.0/users HTTP/1.1" 200 295 0.279761
+
+(eventlet.wsgi.server): 2013-07-26 00:55:05,892 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39938)
+
+(access): 2013-07-26 00:55:05,899 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:05 +0000] "GET http://129.127.10.133:35357/v2.0/users/526281f7faa74c40b758b69485f89339 HTTP/1.0" 200 166
+(eventlet.wsgi.server): 2013-07-26 00:55:05,900 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:05] "GET /v2.0/users/526281f7faa74c40b758b69485f89339 HTTP/1.1" 200 295 0.007005
+
+(eventlet.wsgi.server): 2013-07-26 00:55:05,913 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39939)
+
+(access): 2013-07-26 00:55:05,920 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:05 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles/78833ac95510457a8f9003571c2ec97c HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:55:05,920 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:05] "GET /v2.0/OS-KSADM/roles/78833ac95510457a8f9003571c2ec97c HTTP/1.1" 200 197 0.007021
+
+(eventlet.wsgi.server): 2013-07-26 00:55:05,923 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39940)
+
+(access): 2013-07-26 00:55:05,988 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:05 +0000] "PUT http://129.127.10.133:35357/v2.0/tenants/b4dd7d98e2764e1f9a1c488ca895959e/users/526281f7faa74c40b758b69485f89339/roles/OS-KSADM/78833ac95510457a8f9003571c2ec97c HTTP/1.0" 200 69
+(eventlet.wsgi.server): 2013-07-26 00:55:05,988 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:05] "PUT /v2.0/tenants/b4dd7d98e2764e1f9a1c488ca895959e/users/526281f7faa74c40b758b69485f89339/roles/OS-KSADM/78833ac95510457a8f9003571c2ec97c HTTP/1.1" 200 197 0.064549
+
+(eventlet.wsgi.server): 2013-07-26 00:55:06,331 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39941)
+
+(access): 2013-07-26 00:55:06,376 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:06 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/services HTTP/1.0" 200 138
+(eventlet.wsgi.server): 2013-07-26 00:55:06,377 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:06] "POST /v2.0/OS-KSADM/services HTTP/1.1" 200 267 0.045214
+
+(eventlet.wsgi.server): 2013-07-26 00:55:06,724 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39942)
+
+(access): 2013-07-26 00:55:06,860 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:06 +0000] "POST http://129.127.10.133:35357/v2.0/endpoints HTTP/1.0" 200 259
+(eventlet.wsgi.server): 2013-07-26 00:55:06,860 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:06] "POST /v2.0/endpoints HTTP/1.1" 200 388 0.136200
+
+(eventlet.wsgi.server): 2013-07-26 00:55:07,202 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39943)
+
+(access): 2013-07-26 00:55:07,252 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:07 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/services HTTP/1.0" 200 136
+(eventlet.wsgi.server): 2013-07-26 00:55:07,253 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:07] "POST /v2.0/OS-KSADM/services HTTP/1.1" 200 265 0.049564
+
+(eventlet.wsgi.server): 2013-07-26 00:55:07,608 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39944)
+
+(access): 2013-07-26 00:55:07,728 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:07 +0000] "POST http://129.127.10.133:35357/v2.0/endpoints HTTP/1.0" 200 304
+(eventlet.wsgi.server): 2013-07-26 00:55:07,728 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:07] "POST /v2.0/endpoints HTTP/1.1" 200 433 0.119394
+
+(eventlet.wsgi.server): 2013-07-26 00:55:08,069 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39945)
+
+(access): 2013-07-26 00:55:08,120 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:08 +0000] "POST http://129.127.10.133:35357/v2.0/OS-KSADM/services HTTP/1.0" 200 113
+(eventlet.wsgi.server): 2013-07-26 00:55:08,121 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:08] "POST /v2.0/OS-KSADM/services HTTP/1.1" 200 242 0.050616
+
+(eventlet.wsgi.server): 2013-07-26 00:55:08,431 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39946)
+
+(access): 2013-07-26 00:55:08,579 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:08 +0000] "POST http://129.127.10.133:35357/v2.0/endpoints HTTP/1.0" 200 259
+(eventlet.wsgi.server): 2013-07-26 00:55:08,580 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:08] "POST /v2.0/endpoints HTTP/1.1" 200 388 0.148168
+
+(eventlet.wsgi.server): 2013-07-26 00:55:08,936 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39947)
+
+(access): 2013-07-26 00:55:08,980 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:08 +0000] "POST http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 200 112
+(eventlet.wsgi.server): 2013-07-26 00:55:08,980 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:08] "POST /v2.0/tenants HTTP/1.1" 200 241 0.043606
+
+(eventlet.wsgi.server): 2013-07-26 00:55:09,339 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39948)
+
+(access): 2013-07-26 00:55:09,563 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:09 +0000] "POST http://129.127.10.133:35357/v2.0/users HTTP/1.0" 200 140
+(eventlet.wsgi.server): 2013-07-26 00:55:09,564 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:09] "POST /v2.0/users HTTP/1.1" 200 269 0.224052
+
+(eventlet.wsgi.server): 2013-07-26 00:55:09,920 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39949)
+
+(access): 2013-07-26 00:55:09,928 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:09 +0000] "GET http://129.127.10.133:35357/v2.0/users/966e08904daa4bb0b6668756a7f6b840 HTTP/1.0" 200 140
+(eventlet.wsgi.server): 2013-07-26 00:55:09,929 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:09] "GET /v2.0/users/966e08904daa4bb0b6668756a7f6b840 HTTP/1.1" 200 269 0.008094
+
+(eventlet.wsgi.server): 2013-07-26 00:55:09,942 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39950)
+
+(access): 2013-07-26 00:55:09,950 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:09 +0000] "GET http://129.127.10.133:35357/v2.0/OS-KSADM/roles/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.0" 200 70
+(eventlet.wsgi.server): 2013-07-26 00:55:09,950 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:09] "GET /v2.0/OS-KSADM/roles/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.1" 200 198 0.007497
+
+(eventlet.wsgi.server): 2013-07-26 00:55:09,952 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39951)
+
+(access): 2013-07-26 00:55:10,009 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:25:10 +0000] "PUT http://129.127.10.133:35357/v2.0/tenants/b2b296da70284e9c80e83d0e80f6649e/users/966e08904daa4bb0b6668756a7f6b840/roles/OS-KSADM/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.0" 200 70
+(eventlet.wsgi.server): 2013-07-26 00:55:10,009 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:55:10] "PUT /v2.0/tenants/b2b296da70284e9c80e83d0e80f6649e/users/966e08904daa4bb0b6668756a7f6b840/roles/OS-KSADM/598acfa9088a4927b672859e2d5ed7a6 HTTP/1.1" 200 198 0.056925
+
+(eventlet.wsgi.server): 2013-07-26 00:57:29,338 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39978)
+
+(access): 2013-07-26 00:57:29,691 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:29 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:29,692 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:29] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.353747
+
+(eventlet.wsgi.server): 2013-07-26 00:57:30,014 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39979)
+
+(access): 2013-07-26 00:57:30,326 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:30 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:30,326 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:30] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.311993
+
+(eventlet.wsgi.server): 2013-07-26 00:57:30,796 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39980)
+
+(access): 2013-07-26 00:57:31,108 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:31 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:31,109 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:31] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.312012
+
+(eventlet.wsgi.server): 2013-07-26 00:57:31,124 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39982)
+
+(access): 2013-07-26 00:57:31,434 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:31 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 6076
+(eventlet.wsgi.server): 2013-07-26 00:57:31,434 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:31] "POST /v2.0/tokens HTTP/1.1" 200 6206 0.309635
+
+(eventlet.wsgi.server): 2013-07-26 00:57:31,436 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39983)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:31,445 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'549ae2116f944b72b80270a35025dfcb', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:31,460 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:31 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:31,461 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:31] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.024801
+
+(eventlet.wsgi.server): 2013-07-26 00:57:31,471 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39984)
+
+(access): 2013-07-26 00:57:31,475 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:31 +0000] "GET http://129.127.10.133:35357/v2.0/certificates/signing HTTP/1.0" 200 2415
+(eventlet.wsgi.server): 2013-07-26 00:57:31,476 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:31] "GET /v2.0/certificates/signing HTTP/1.1" 200 2533 0.004334
+
+(eventlet.wsgi.server): 2013-07-26 00:57:31,485 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39985)
+
+(access): 2013-07-26 00:57:31,490 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:31 +0000] "GET http://129.127.10.133:35357/v2.0/certificates/ca HTTP/1.0" 200 1070
+(eventlet.wsgi.server): 2013-07-26 00:57:31,490 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:31] "GET /v2.0/certificates/ca HTTP/1.1" 200 1188 0.004876
+
+(eventlet.wsgi.server): 2013-07-26 00:57:32,356 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39988)
+
+(access): 2013-07-26 00:57:32,668 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:32 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:32,669 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:32] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.312504
+
+(eventlet.wsgi.server): 2013-07-26 00:57:32,680 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39989)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:32,688 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:32,693 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:32 +0000] "GET http://129.127.10.133:35357/v2.0/tenants HTTP/1.0" 200 546
+(eventlet.wsgi.server): 2013-07-26 00:57:32,693 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:32] "GET /v2.0/tenants HTTP/1.1" 200 675 0.012799
+
+(eventlet.wsgi.server): 2013-07-26 00:57:32,988 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39990)
+
+(access): 2013-07-26 00:57:33,278 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:33 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:33,279 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:33] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.290276
+
+(eventlet.wsgi.server): 2013-07-26 00:57:33,290 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39991)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:33,300 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:33,307 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:33 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/3f149d674b28434c99cd049c1c44fff8/users HTTP/1.0" 200 137
+(eventlet.wsgi.server): 2013-07-26 00:57:33,307 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:33] "GET /v2.0/tenants/3f149d674b28434c99cd049c1c44fff8/users HTTP/1.1" 200 266 0.016246
+
+(eventlet.wsgi.server): 2013-07-26 00:57:33,648 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39992)
+
+(access): 2013-07-26 00:57:34,013 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:34 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:34,013 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:34] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.364469
+
+(eventlet.wsgi.server): 2013-07-26 00:57:34,028 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39993)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:34,037 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:703: SADeprecationWarning: The 'listeners' argument to Pool (and create_engine()) is deprecated.  Use event.listen().
+  Pool.__init__(self, creator, **kw)
+/usr/local/lib/python2.7/dist-packages/sqlalchemy/pool.py:160: SADeprecationWarning: Pool.add_listener is deprecated.  Use event.listen()
+  self.add_listener(l)
+(access): 2013-07-26 00:57:34,055 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:34 +0000] "GET http://129.127.10.133:35357/v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.0" 200 19
+(eventlet.wsgi.server): 2013-07-26 00:57:34,056 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:34] "GET /v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.1" 200 147 0.027561
+
+(eventlet.wsgi.server): 2013-07-26 00:57:34,349 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39994)
+
+(access): 2013-07-26 00:57:34,655 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:34 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:34,655 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:34] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.305262
+
+(eventlet.wsgi.server): 2013-07-26 00:57:34,666 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39995)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:34,675 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:34,721 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:34 +0000] "POST http://129.127.10.133:35357/v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.0" 200 204
+(eventlet.wsgi.server): 2013-07-26 00:57:34,722 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:34] "POST /v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.1" 200 333 0.054623
+
+(eventlet.wsgi.server): 2013-07-26 00:57:35,077 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39996)
+
+(access): 2013-07-26 00:57:35,373 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:35 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:35,373 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:35] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.295919
+
+(eventlet.wsgi.server): 2013-07-26 00:57:35,387 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39997)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:35,395 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:35,402 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:35 +0000] "GET http://129.127.10.133:35357/v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.0" 200 207
+(eventlet.wsgi.server): 2013-07-26 00:57:35,402 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:35] "GET /v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.1" 200 336 0.014371
+
+(eventlet.wsgi.server): 2013-07-26 00:57:35,405 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39998)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:35,414 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:35,418 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:35 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/3f149d674b28434c99cd049c1c44fff8 HTTP/1.0" 200 109
+(eventlet.wsgi.server): 2013-07-26 00:57:35,418 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:35] "GET /v2.0/tenants/3f149d674b28434c99cd049c1c44fff8 HTTP/1.1" 200 238 0.012459
+
+(eventlet.wsgi.server): 2013-07-26 00:57:35,947 DEBUG wsgi write (30703) accepted ('129.127.10.133', 39999)
+
+(access): 2013-07-26 00:57:36,232 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:36 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:36,232 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:36] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.285130
+
+(eventlet.wsgi.server): 2013-07-26 00:57:36,249 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40001)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:36,261 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'549ae2116f944b72b80270a35025dfcb', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:36,278 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:36 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:36,279 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:36] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029433
+
+(eventlet.wsgi.server): 2013-07-26 00:57:36,783 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40002)
+
+(access): 2013-07-26 00:57:37,136 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:37 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:37,136 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:37] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.352139
+
+(eventlet.wsgi.server): 2013-07-26 00:57:37,150 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40003)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:37,158 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:37,163 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:37 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/b2b296da70284e9c80e83d0e80f6649e/users HTTP/1.0" 200 143
+(eventlet.wsgi.server): 2013-07-26 00:57:37,164 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:37] "GET /v2.0/tenants/b2b296da70284e9c80e83d0e80f6649e/users HTTP/1.1" 200 272 0.012720
+
+(eventlet.wsgi.server): 2013-07-26 00:57:37,458 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40004)
+
+(access): 2013-07-26 00:57:37,744 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:37 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:37,745 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:37] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.286145
+
+(eventlet.wsgi.server): 2013-07-26 00:57:37,756 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40005)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:37,763 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:37,769 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:37 +0000] "GET http://129.127.10.133:35357/v2.0/users/966e08904daa4bb0b6668756a7f6b840/credentials/OS-EC2 HTTP/1.0" 200 19
+(eventlet.wsgi.server): 2013-07-26 00:57:37,769 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:37] "GET /v2.0/users/966e08904daa4bb0b6668756a7f6b840/credentials/OS-EC2 HTTP/1.1" 200 147 0.012486
+
+(eventlet.wsgi.server): 2013-07-26 00:57:38,110 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40006)
+
+(access): 2013-07-26 00:57:38,781 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:38 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:38,782 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:38] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.671236
+
+(eventlet.wsgi.server): 2013-07-26 00:57:38,794 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40007)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:38,801 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:39,037 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:39 +0000] "POST http://129.127.10.133:35357/v2.0/users/966e08904daa4bb0b6668756a7f6b840/credentials/OS-EC2 HTTP/1.0" 200 204
+(eventlet.wsgi.server): 2013-07-26 00:57:39,038 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:39] "POST /v2.0/users/966e08904daa4bb0b6668756a7f6b840/credentials/OS-EC2 HTTP/1.1" 200 333 0.243551
+
+(eventlet.wsgi.server): 2013-07-26 00:57:39,365 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40008)
+
+(access): 2013-07-26 00:57:39,664 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:39 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:39,665 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:39] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.299350
+
+(eventlet.wsgi.server): 2013-07-26 00:57:39,676 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40009)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:39,683 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:39,689 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:39 +0000] "GET http://129.127.10.133:35357/v2.0/users/966e08904daa4bb0b6668756a7f6b840/credentials/OS-EC2 HTTP/1.0" 200 207
+(eventlet.wsgi.server): 2013-07-26 00:57:39,689 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:39] "GET /v2.0/users/966e08904daa4bb0b6668756a7f6b840/credentials/OS-EC2 HTTP/1.1" 200 336 0.013079
+
+(eventlet.wsgi.server): 2013-07-26 00:57:39,692 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40010)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:39,701 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:39,705 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:39 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/b2b296da70284e9c80e83d0e80f6649e HTTP/1.0" 200 112
+(eventlet.wsgi.server): 2013-07-26 00:57:39,705 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:39] "GET /v2.0/tenants/b2b296da70284e9c80e83d0e80f6649e HTTP/1.1" 200 241 0.012519
+
+(eventlet.wsgi.server): 2013-07-26 00:57:40,166 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40011)
+
+(access): 2013-07-26 00:57:40,449 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:40 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5964
+(eventlet.wsgi.server): 2013-07-26 00:57:40,449 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:40] "POST /v2.0/tokens HTTP/1.1" 200 6094 0.283179
+
+(eventlet.wsgi.server): 2013-07-26 00:57:40,468 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40013)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:40,479 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'549ae2116f944b72b80270a35025dfcb', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:40,497 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:40 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:40,498 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:40] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029287
+
+(eventlet.wsgi.server): 2013-07-26 00:57:40,989 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40014)
+
+(access): 2013-07-26 00:57:41,302 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:41 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:41,302 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:41] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.312125
+
+(eventlet.wsgi.server): 2013-07-26 00:57:41,313 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40015)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:41,323 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:41,329 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:41 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45/users HTTP/1.0" 200 261
+(eventlet.wsgi.server): 2013-07-26 00:57:41,330 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:41] "GET /v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45/users HTTP/1.1" 200 390 0.016022
+
+(eventlet.wsgi.server): 2013-07-26 00:57:41,620 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40016)
+
+(access): 2013-07-26 00:57:41,911 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:41 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:41,912 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:41] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.291489
+
+(eventlet.wsgi.server): 2013-07-26 00:57:41,924 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40017)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:41,932 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:41,938 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:41 +0000] "GET http://129.127.10.133:35357/v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.0" 200 207
+(eventlet.wsgi.server): 2013-07-26 00:57:41,938 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:41] "GET /v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.1" 200 336 0.013719
+
+(eventlet.wsgi.server): 2013-07-26 00:57:41,941 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40018)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:41,950 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:41,954 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:41 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/3f149d674b28434c99cd049c1c44fff8 HTTP/1.0" 200 109
+(eventlet.wsgi.server): 2013-07-26 00:57:41,954 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:41] "GET /v2.0/tenants/3f149d674b28434c99cd049c1c44fff8 HTTP/1.1" 200 238 0.012911
+
+(eventlet.wsgi.server): 2013-07-26 00:57:42,254 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40019)
+
+(access): 2013-07-26 00:57:42,553 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:42 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:42,554 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:42] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.299744
+
+(eventlet.wsgi.server): 2013-07-26 00:57:42,568 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40020)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:42,577 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:42,628 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:42 +0000] "POST http://129.127.10.133:35357/v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.0" 200 204
+(eventlet.wsgi.server): 2013-07-26 00:57:42,628 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:42] "POST /v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.1" 200 333 0.059209
+
+(eventlet.wsgi.server): 2013-07-26 00:57:42,975 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40021)
+
+(access): 2013-07-26 00:57:43,279 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:43 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:43,283 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:43] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.307008
+
+(eventlet.wsgi.server): 2013-07-26 00:57:43,291 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40022)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:43,298 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:43,304 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:43 +0000] "GET http://129.127.10.133:35357/v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.0" 200 397
+(eventlet.wsgi.server): 2013-07-26 00:57:43,305 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:43] "GET /v2.0/users/4b505d0a4c3445b9ba9e6d7a77c0b842/credentials/OS-EC2 HTTP/1.1" 200 526 0.013168
+
+(eventlet.wsgi.server): 2013-07-26 00:57:43,307 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40023)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:43,316 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:43,320 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:43 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/3f149d674b28434c99cd049c1c44fff8 HTTP/1.0" 200 109
+(eventlet.wsgi.server): 2013-07-26 00:57:43,323 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:43] "GET /v2.0/tenants/3f149d674b28434c99cd049c1c44fff8 HTTP/1.1" 200 238 0.014807
+
+(eventlet.wsgi.server): 2013-07-26 00:57:43,323 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40024)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:43,332 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:43,336 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:43 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45 HTTP/1.0" 200 108
+(eventlet.wsgi.server): 2013-07-26 00:57:43,336 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:43] "GET /v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45 HTTP/1.1" 200 237 0.012370
+
+(eventlet.wsgi.server): 2013-07-26 00:57:43,865 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40025)
+
+(access): 2013-07-26 00:57:44,156 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:44 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5941
+(eventlet.wsgi.server): 2013-07-26 00:57:44,156 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:44] "POST /v2.0/tokens HTTP/1.1" 200 6071 0.290941
+
+(eventlet.wsgi.server): 2013-07-26 00:57:44,171 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40027)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:44,181 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'549ae2116f944b72b80270a35025dfcb', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:44,197 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:44 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:44,197 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:44] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.025929
+
+(eventlet.wsgi.server): 2013-07-26 00:57:44,660 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40028)
+
+(access): 2013-07-26 00:57:45,000 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:45 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:45,000 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:45] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.339877
+
+(eventlet.wsgi.server): 2013-07-26 00:57:45,012 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40029)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:45,020 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:45,026 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:45 +0000] "GET http://129.127.10.133:35357/v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.0" 200 19
+(eventlet.wsgi.server): 2013-07-26 00:57:45,026 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:45] "GET /v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.1" 200 147 0.014213
+
+(eventlet.wsgi.server): 2013-07-26 00:57:45,312 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40030)
+
+(access): 2013-07-26 00:57:45,660 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:45 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:45,660 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:45] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.347694
+
+(eventlet.wsgi.server): 2013-07-26 00:57:45,671 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40031)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:45,679 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:45,726 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:45 +0000] "POST http://129.127.10.133:35357/v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.0" 200 204
+(eventlet.wsgi.server): 2013-07-26 00:57:45,727 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:45] "POST /v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.1" 200 333 0.054865
+
+(eventlet.wsgi.server): 2013-07-26 00:57:46,063 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40032)
+
+(access): 2013-07-26 00:57:46,377 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:46 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:46,378 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:46] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.314405
+
+(eventlet.wsgi.server): 2013-07-26 00:57:46,390 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40033)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:46,399 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:46,405 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:46 +0000] "GET http://129.127.10.133:35357/v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.0" 200 207
+(eventlet.wsgi.server): 2013-07-26 00:57:46,405 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:46] "GET /v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.1" 200 336 0.014347
+
+(eventlet.wsgi.server): 2013-07-26 00:57:46,408 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40034)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:46,417 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:46,420 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:46 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45 HTTP/1.0" 200 108
+(eventlet.wsgi.server): 2013-07-26 00:57:46,421 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:46] "GET /v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45 HTTP/1.1" 200 237 0.012047
+
+(eventlet.wsgi.server): 2013-07-26 00:57:46,901 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40035)
+
+(access): 2013-07-26 00:57:47,195 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:47 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 6081
+(eventlet.wsgi.server): 2013-07-26 00:57:47,196 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:47] "POST /v2.0/tokens HTTP/1.1" 200 6211 0.294113
+
+(eventlet.wsgi.server): 2013-07-26 00:57:47,212 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40037)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:47,223 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'549ae2116f944b72b80270a35025dfcb', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:47,241 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:47 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:47,242 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:47] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029012
+
+(eventlet.wsgi.server): 2013-07-26 00:57:47,750 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40038)
+
+(access): 2013-07-26 00:57:48,073 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:48 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:48,074 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:48] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.323660
+
+(eventlet.wsgi.server): 2013-07-26 00:57:48,086 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40039)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:48,096 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:48,102 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:48 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/76e5d7d0341242aeadb83513df23ff71/users HTTP/1.0" 200 135
+(eventlet.wsgi.server): 2013-07-26 00:57:48,103 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:48] "GET /v2.0/tenants/76e5d7d0341242aeadb83513df23ff71/users HTTP/1.1" 200 264 0.016164
+
+(eventlet.wsgi.server): 2013-07-26 00:57:48,394 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40040)
+
+(access): 2013-07-26 00:57:48,757 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:48 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:48,758 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:48] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.364072
+
+(eventlet.wsgi.server): 2013-07-26 00:57:48,770 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40041)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:48,777 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:48,782 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:48 +0000] "GET http://129.127.10.133:35357/v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.0" 200 207
+(eventlet.wsgi.server): 2013-07-26 00:57:48,782 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:48] "GET /v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.1" 200 336 0.011869
+
+(eventlet.wsgi.server): 2013-07-26 00:57:48,785 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40042)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:48,795 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:48,798 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:48 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45 HTTP/1.0" 200 108
+(eventlet.wsgi.server): 2013-07-26 00:57:48,799 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:48] "GET /v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45 HTTP/1.1" 200 237 0.012972
+
+(eventlet.wsgi.server): 2013-07-26 00:57:49,147 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40043)
+
+(access): 2013-07-26 00:57:49,585 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:49 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:49,586 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:49] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.438762
+
+(eventlet.wsgi.server): 2013-07-26 00:57:49,600 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40044)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:49,609 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:49,677 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:49 +0000] "POST http://129.127.10.133:35357/v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.0" 200 204
+(eventlet.wsgi.server): 2013-07-26 00:57:49,678 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:49] "POST /v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.1" 200 333 0.076945
+
+(eventlet.wsgi.server): 2013-07-26 00:57:50,025 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40045)
+
+(access): 2013-07-26 00:57:50,328 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:50 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:50,328 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:50] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.302080
+
+(eventlet.wsgi.server): 2013-07-26 00:57:50,339 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40046)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:50,347 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:50,352 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:50 +0000] "GET http://129.127.10.133:35357/v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.0" 200 397
+(eventlet.wsgi.server): 2013-07-26 00:57:50,353 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:50] "GET /v2.0/users/c9ea51b608a34159ac0d0895bf5d8cf2/credentials/OS-EC2 HTTP/1.1" 200 526 0.013065
+
+(eventlet.wsgi.server): 2013-07-26 00:57:50,356 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40047)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:50,365 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:50,368 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:50 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45 HTTP/1.0" 200 108
+(eventlet.wsgi.server): 2013-07-26 00:57:50,369 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:50] "GET /v2.0/tenants/cba13868bd3b4d89bef1a04e9f5f7c45 HTTP/1.1" 200 237 0.012094
+
+(eventlet.wsgi.server): 2013-07-26 00:57:50,371 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40048)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:50,380 DEBUG rules enforce enforce admin_required: {'tenant_id': u'3f149d674b28434c99cd049c1c44fff8', 'user_id': u'4b505d0a4c3445b9ba9e6d7a77c0b842', u'roles': [u'admin']}
+(access): 2013-07-26 00:57:50,384 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:50 +0000] "GET http://129.127.10.133:35357/v2.0/tenants/76e5d7d0341242aeadb83513df23ff71 HTTP/1.0" 200 122
+(eventlet.wsgi.server): 2013-07-26 00:57:50,384 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:50] "GET /v2.0/tenants/76e5d7d0341242aeadb83513df23ff71 HTTP/1.1" 200 251 0.012334
+
+(eventlet.wsgi.server): 2013-07-26 00:57:50,856 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40049)
+
+(access): 2013-07-26 00:57:51,145 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:51 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5970
+(eventlet.wsgi.server): 2013-07-26 00:57:51,146 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:51] "POST /v2.0/tokens HTTP/1.1" 200 6100 0.289255
+
+(eventlet.wsgi.server): 2013-07-26 00:57:51,160 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40051)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:51,169 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'549ae2116f944b72b80270a35025dfcb', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:51,188 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:51 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:51,189 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:51] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.028433
+
+(eventlet.wsgi.server): 2013-07-26 00:57:51,774 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40052)
+
+(access): 2013-07-26 00:57:52,073 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:52 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:52,073 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:52] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.298604
+
+(eventlet.wsgi.server): 2013-07-26 00:57:52,741 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40054)
+
+(access): 2013-07-26 00:57:53,042 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 6088
+(eventlet.wsgi.server): 2013-07-26 00:57:53,042 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "POST /v2.0/tokens HTTP/1.1" 200 6218 0.300378
+
+(eventlet.wsgi.server): 2013-07-26 00:57:53,044 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40055)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:53,053 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:53,067 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:53,067 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.022822
+
+(eventlet.wsgi.server): 2013-07-26 00:57:53,076 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40056)
+
+(access): 2013-07-26 00:57:53,080 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "GET http://129.127.10.133:35357/v2.0/certificates/signing HTTP/1.0" 200 2415
+(eventlet.wsgi.server): 2013-07-26 00:57:53,080 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "GET /v2.0/certificates/signing HTTP/1.1" 200 2533 0.004044
+
+(eventlet.wsgi.server): 2013-07-26 00:57:53,089 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40057)
+
+(access): 2013-07-26 00:57:53,095 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "GET http://129.127.10.133:35357/v2.0/certificates/ca HTTP/1.0" 200 1070
+(eventlet.wsgi.server): 2013-07-26 00:57:53,095 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "GET /v2.0/certificates/ca HTTP/1.1" 200 1188 0.004967
+
+(eventlet.wsgi.server): 2013-07-26 00:57:53,169 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40059)
+
+(access): 2013-07-26 00:57:53,468 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 6088
+(eventlet.wsgi.server): 2013-07-26 00:57:53,468 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "POST /v2.0/tokens HTTP/1.1" 200 6218 0.298325
+
+(eventlet.wsgi.server): 2013-07-26 00:57:53,469 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40060)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:53,478 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:53,492 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:53,493 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.022840
+
+(eventlet.wsgi.server): 2013-07-26 00:57:53,501 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40061)
+
+(access): 2013-07-26 00:57:53,505 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "GET http://129.127.10.133:35357/v2.0/certificates/signing HTTP/1.0" 200 2415
+(eventlet.wsgi.server): 2013-07-26 00:57:53,506 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "GET /v2.0/certificates/signing HTTP/1.1" 200 2533 0.004051
+
+(eventlet.wsgi.server): 2013-07-26 00:57:53,516 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40062)
+
+(access): 2013-07-26 00:57:53,521 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "GET http://129.127.10.133:35357/v2.0/certificates/ca HTTP/1.0" 200 1070
+(eventlet.wsgi.server): 2013-07-26 00:57:53,522 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "GET /v2.0/certificates/ca HTTP/1.1" 200 1188 0.004918
+
+(eventlet.wsgi.server): 2013-07-26 00:57:53,694 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40064)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:53,705 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:53,723 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:53,724 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029460
+
+(eventlet.wsgi.server): 2013-07-26 00:57:53,766 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40066)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:53,777 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:53,795 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:53,796 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029300
+
+(eventlet.wsgi.server): 2013-07-26 00:57:53,930 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40068)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:53,940 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:53,958 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:53 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:53,959 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:53] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.028392
+
+(eventlet.wsgi.server): 2013-07-26 00:57:54,066 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40070)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:54,076 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:54,095 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:54 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:54,096 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:54] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.028795
+
+(eventlet.wsgi.server): 2013-07-26 00:57:54,234 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40072)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:54,245 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:54,263 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:54 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:54,264 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:54] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029104
+
+(eventlet.wsgi.server): 2013-07-26 00:57:54,626 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40074)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:54,635 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:54,649 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:54 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:54,650 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:54] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.023525
+
+(eventlet.wsgi.server): 2013-07-26 00:57:54,674 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40076)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:54,685 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:54,704 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:54 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:54,704 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:54] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029858
+
+(eventlet.wsgi.server): 2013-07-26 00:57:54,794 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40078)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:54,804 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:54,822 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:54 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:54,823 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:54] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.028152
+
+(eventlet.wsgi.server): 2013-07-26 00:57:54,864 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40080)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:54,876 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:54,894 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:54 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:54,895 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:54] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029856
+
+(eventlet.wsgi.server): 2013-07-26 00:57:55,014 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40082)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:55,023 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:55,037 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:55 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:55,038 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:55] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.023318
+
+(eventlet.wsgi.server): 2013-07-26 00:57:55,128 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40084)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:55,141 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:55,159 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:55 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:55,160 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:55] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.030772
+
+(eventlet.wsgi.server): 2013-07-26 00:57:55,321 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40086)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:55,330 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:55,347 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:55 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:55,347 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:55] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.026061
+
+(eventlet.wsgi.server): 2013-07-26 00:57:55,698 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40088)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:55,710 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:55,728 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:55 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:55,729 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:55] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029952
+
+(eventlet.wsgi.server): 2013-07-26 00:57:55,756 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40090)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:55,769 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:55,787 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:55 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:55,788 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:55] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.030644
+
+(eventlet.wsgi.server): 2013-07-26 00:57:55,873 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40092)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:55,882 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:55,900 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:55 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:55,901 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:55] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.027276
+
+(eventlet.wsgi.server): 2013-07-26 00:57:55,943 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40094)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:55,955 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:55,973 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:55 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:55,974 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:55] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029564
+
+(eventlet.wsgi.server): 2013-07-26 00:57:56,301 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40096)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:56,313 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:56,331 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:56 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:56,332 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:56] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.030423
+
+(eventlet.wsgi.server): 2013-07-26 00:57:56,462 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40098)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:56,474 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:56,492 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:56 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:56,494 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:56] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.031488
+
+(eventlet.wsgi.server): 2013-07-26 00:57:56,638 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40100)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:56,650 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:56,668 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:56 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:56,669 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:56] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029809
+
+(eventlet.wsgi.server): 2013-07-26 00:57:58,177 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40101)
+
+(access): 2013-07-26 00:57:58,500 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:58 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:58,501 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:58] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.323390
+
+(eventlet.wsgi.server): 2013-07-26 00:57:58,513 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40103)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:58,522 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:58,540 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:58 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:58,541 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:58] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.027789
+
+(eventlet.wsgi.server): 2013-07-26 00:57:58,568 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40105)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:58,580 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'526281f7faa74c40b758b69485f89339', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:58,598 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:58 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:58,599 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:58] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029732
+
+(eventlet.wsgi.server): 2013-07-26 00:57:59,180 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40106)
+
+(access): 2013-07-26 00:57:59,485 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:59 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:57:59,486 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:59] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.305094
+
+(eventlet.wsgi.server): 2013-07-26 00:57:59,500 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40108)
+
+(keystone.policy.backends.rules): 2013-07-26 00:57:59,510 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'549ae2116f944b72b80270a35025dfcb', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:57:59,525 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:27:59 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:57:59,525 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:57:59] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.024846
+
+(eventlet.wsgi.server): 2013-07-26 00:58:00,130 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40110)
+
+(keystone.policy.backends.rules): 2013-07-26 00:58:00,142 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'549ae2116f944b72b80270a35025dfcb', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:58:00,156 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:28:00 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:58:00,157 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:58:00] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.025808
+
+(eventlet.wsgi.server): 2013-07-26 00:58:00,646 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40111)
+
+(access): 2013-07-26 00:58:00,939 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:28:00 +0000] "POST http://129.127.10.133:35357/v2.0/tokens HTTP/1.0" 200 5942
+(eventlet.wsgi.server): 2013-07-26 00:58:00,939 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:58:00] "POST /v2.0/tokens HTTP/1.1" 200 6072 0.292475
+
+(eventlet.wsgi.server): 2013-07-26 00:58:00,954 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40113)
+
+(keystone.policy.backends.rules): 2013-07-26 00:58:00,963 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'549ae2116f944b72b80270a35025dfcb', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:58:00,981 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:28:00 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:58:00,981 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:58:00] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.027027
+
+(eventlet.wsgi.server): 2013-07-26 00:58:01,077 DEBUG wsgi write (30703) accepted ('129.127.10.133', 40115)
+
+(keystone.policy.backends.rules): 2013-07-26 00:58:01,089 DEBUG rules enforce enforce admin_required: {'tenant_id': u'b4dd7d98e2764e1f9a1c488ca895959e', 'user_id': u'549ae2116f944b72b80270a35025dfcb', u'roles': [u'_member_', u'admin']}
+(access): 2013-07-26 00:58:01,107 INFO core __call__ 129.127.10.133 - - [25/Jul/2013:15:28:01 +0000] "GET http://129.127.10.133:35357/v2.0/tokens/revoked HTTP/1.0" 200 504
+(eventlet.wsgi.server): 2013-07-26 00:58:01,107 DEBUG wsgi write 129.127.10.133 - - [26/Jul/2013 00:58:01] "GET /v2.0/tokens/revoked HTTP/1.1" 200 633 0.029652
+

@@ -1,0 +1,17 @@
+stack.sh log /home/stack/devstack/log/stack.log.2013-07-25-011740
+Installing package prerequisites
+Installing OpenStack project source
+Configuring OpenStack projects
+Starting RabbitMQ
+Configuring and starting MySQL
+Starting Keystone
+Configuring and starting Horizon
+Configuring Glance
+Configuring Nova
+Configuring Cinder
+Configuring Nova
+Using libvirt virtualization driver
+Starting Glance
+Starting Nova API
+Starting Nova
+Starting Cinder

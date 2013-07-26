@@ -1,0 +1,23 @@
+stack@red:~/devstack$ cd /opt/stack/nova && sg libvirtd /opt/stack/nova/bin/nova -compute || touch "/opt/stack/status/stack/n-cpu.failure"
+2013-07-25 01:20:30.420 [00;32mDEBUG nova.service [[00;36m-[00;32m] [01;35m[00;32min nova.service.create method to create a service: [00m [00;33mfrom (pid=17898) create /opt/stack/nova/nova/service.py:540[00m
+2013-07-25 01:20:30.421 [00;32mDEBUG nova.service [[00;36m-[00;32m] [01;35m[00;32min nova.service.create method before call cls(host, binary, topic, manager...)[00m [00;33mfrom (pid=17898) create /opt/stack/nova/nova/service.py:557[00m
+2013-07-25 01:20:30.421 [00;32mDEBUG nova.service [[00;36m-[00;32m] [01;35m[00;32mTO call servicegroup.API and set as self.servicegroup_api[00m [00;33mfrom (pid=17898) __init__ /opt/stack/nova/nova/service.py:413[00m
+2013-07-25 01:20:30.421 [00;32mDEBUG nova.servicegroup.api [[00;36m-[00;32m] [01;35m[00;32mServiceGroup driver defined as an instance of db[00m [00;33mfrom (pid=17898) __new__ /opt/stack/nova/nova/servicegroup/api.py:62[00m
+2013-07-25 01:20:30.422 [00;32mDEBUG nova.openstack.common.importutils [[00;36m-[00;32m] [01;35m[00;32mIn importutils file import_class method  to import module::nova.servicegroup.drivers.db.[00m [00;33mfrom (pid=17898) import_class /opt/stack/nova/nova/openstack/common/importutils.py:31[00m
+2013-07-25 01:20:30.422 [00;32mDEBUG nova.openstack.common.importutils [[00;36m-[00;32m] [01;35m[00;32mExisting importutil file import_class method[00m [00;33mfrom (pid=17898) import_class /opt/stack/nova/nova/openstack/common/importutils.py:33[00m
+2013-07-25 01:20:30.423 [00;32mDEBUG nova.conductor [[00;36m-[00;32m] [01;35m[00;32min conductor.__init__.py API method using conductor_api.API[00m [00;33mfrom (pid=17898) API /opt/stack/nova/nova/conductor/__init__.py:27[00m
+2013-07-25 01:20:30.423 [00;32mDEBUG nova.servicegroup.api [[00;36m-[00;32m] [01;35m[00;32min servicgroup.api class API __new__ after import driver_class[00m [00;33mfrom (pid=17898) __new__ /opt/stack/nova/nova/servicegroup/api.py:70[00m
+2013-07-25 01:20:30.423 [00;32mDEBUG nova.service [[00;36m-[00;32m] [01;35m[00;32mTo import manager_class::nova.compute.manager.ComputeManager [00m [00;33mfrom (pid=17898) __init__ /opt/stack/nova/nova/service.py:415[00m
+2013-07-25 01:20:30.423 [00;32mDEBUG nova.openstack.common.importutils [[00;36m-[00;32m] [01;35m[00;32mIn importutils file import_class method  to import module::nova.compute.manager.[00m [00;33mfrom (pid=17898) import_class /opt/stack/nova/nova/openstack/common/importutils.py:31[00m
+2013-07-25 01:20:30.434 [00;32mDEBUG nova.openstack.common.importutils [[00;36m-[00;32m] [01;35m[00;32mExisting importutil file import_class method[00m [00;33mfrom (pid=17898) import_class /opt/stack/nova/nova/openstack/common/importutils.py:33[00m
+2013-07-25 01:20:30.435 [01;31mCRITICAL nova [[00;36m-[01;31m] [01;35m[01;31munsupported format character ' ' (0x20) at index 60[00m
+[01;31m2013-07-25 01:20:30.435 TRACE nova [01;35m[00mTraceback (most recent call last):
+[01;31m2013-07-25 01:20:30.435 TRACE nova [01;35m[00m  File "/opt/stack/nova/bin/nova-compute", line 83, in <module>
+[01;31m2013-07-25 01:20:30.435 TRACE nova [01;35m[00m    db_allowed=False)
+[01;31m2013-07-25 01:20:30.435 TRACE nova [01;35m[00m  File "/opt/stack/nova/nova/service.py", line 563, in create
+[01;31m2013-07-25 01:20:30.435 TRACE nova [01;35m[00m    db_allowed=db_allowed)
+[01;31m2013-07-25 01:20:30.435 TRACE nova [01;35m[00m  File "/opt/stack/nova/nova/service.py", line 417, in __init__
+[01;31m2013-07-25 01:20:30.435 TRACE nova [01;35m[00m    LOG.debug(_('The self.manager in Service class in nova.service.py is a %. TO initialize this manager as following::')%self.manager_class_name)
+[01;31m2013-07-25 01:20:30.435 TRACE nova [01;35m[00mValueError: unsupported format character ' ' (0x20) at index 60
+[01;31m2013-07-25 01:20:30.435 TRACE nova [01;35m[00m
+stack@red:/opt/stack/nova$ 

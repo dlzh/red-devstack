@@ -1,0 +1,92 @@
+stack@red:~/devstack$ cd /opt/stack/glance; /opt/stack/glance/bin/glance-registr y --config-file=/etc/glance/glance-registry.conf || touch "/opt/stack/status/sta ck/g-reg.failure"
+2013-07-25 01:20:17.673 16855 DEBUG glance.common.config [-] Loading glance-registry-keystone from /etc/glance/glance-registry-paste.ini load_paste_app /opt/stack/glance/glance/common/config.py:201
+2013-07-25 01:20:17.857 16855 DEBUG glance.common.config [-] ******************************************************************************** log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1433
+2013-07-25 01:20:17.857 16855 DEBUG glance.common.config [-] Configuration options gathered from: log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1434
+2013-07-25 01:20:17.857 16855 DEBUG glance.common.config [-] command line args: None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1435
+2013-07-25 01:20:17.857 16855 DEBUG glance.common.config [-] config files: ['/etc/glance/glance-registry.conf'] log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1436
+2013-07-25 01:20:17.857 16855 DEBUG glance.common.config [-] ================================================================================ log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1437
+2013-07-25 01:20:17.858 16855 DEBUG glance.common.config [-] admin_password                 = **** log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.858 16855 DEBUG glance.common.config [-] admin_role                     = admin log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.858 16855 DEBUG glance.common.config [-] admin_tenant_name              = **** log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.858 16855 DEBUG glance.common.config [-] admin_user                     = **** log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.858 16855 DEBUG glance.common.config [-] allow_additional_image_properties = True log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.858 16855 DEBUG glance.common.config [-] allow_anonymous_access         = False log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.858 16855 DEBUG glance.common.config [-] api_limit_max                  = 1000 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.858 16855 DEBUG glance.common.config [-] auth_region                    = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.859 16855 DEBUG glance.common.config [-] auth_strategy                  = noauth log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.859 16855 DEBUG glance.common.config [-] auth_url                       = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.859 16855 DEBUG glance.common.config [-] backlog                        = 4096 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.859 16855 DEBUG glance.common.config [-] bind_host                      = 0.0.0.0 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.859 16855 DEBUG glance.common.config [-] bind_port                      = 9191 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.859 16855 DEBUG glance.common.config [-] ca_file                        = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.859 16855 DEBUG glance.common.config [-] cert_file                      = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.859 16855 DEBUG glance.common.config [-] config_dir                     = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.860 16855 DEBUG glance.common.config [-] config_file                    = ['/etc/glance/glance-registry.conf'] log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.860 16855 DEBUG glance.common.config [-] data_api                       = glance.db.sqlalchemy.api log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.860 16855 DEBUG glance.common.config [-] db_auto_create                 = False log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.860 16855 DEBUG glance.common.config [-] debug                          = True log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.860 16855 DEBUG glance.common.config [-] default_log_levels             = ['amqplib=WARN', 'sqlalchemy=WARN', 'boto=WARN', 'suds=INFO', 'keystone=INFO', 'eventlet.wsgi.server=WARN'] log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.860 16855 DEBUG glance.common.config [-] enable_v1_api                  = True log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.860 16855 DEBUG glance.common.config [-] enable_v2_api                  = True log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.860 16855 DEBUG glance.common.config [-] fatal_deprecations             = False log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.861 16855 DEBUG glance.common.config [-] image_size_cap                 = 1099511627776 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.861 16855 DEBUG glance.common.config [-] instance_format                = [instance: %(uuid)s]  log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.861 16855 DEBUG glance.common.config [-] instance_uuid_format           = [instance: %(uuid)s]  log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.861 16855 DEBUG glance.common.config [-] key_file                       = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.861 16855 DEBUG glance.common.config [-] limit_param_default            = 25 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.861 16855 DEBUG glance.common.config [-] log_config                     = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.861 16855 DEBUG glance.common.config [-] log_date_format                = %Y-%m-%d %H:%M:%S log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.862 16855 DEBUG glance.common.config [-] log_dir                        = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.862 16855 DEBUG glance.common.config [-] log_file                       = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.862 16855 DEBUG glance.common.config [-] log_format                     = %(asctime)s %(levelname)8s [%(name)s] %(message)s log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.862 16855 DEBUG glance.common.config [-] logfile_mode                   = 0644 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.862 16855 DEBUG glance.common.config [-] logging_context_format_string  = %(asctime)s.%(msecs)03d %(levelname)s %(name)s [%(request_id)s %(user)s %(tenant)s] %(instance)s%(message)s log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.862 16855 DEBUG glance.common.config [-] logging_debug_format_suffix    = %(funcName)s %(pathname)s:%(lineno)d log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.862 16855 DEBUG glance.common.config [-] logging_default_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.862 16855 DEBUG glance.common.config [-] logging_exception_prefix       = %(asctime)s.%(msecs)03d %(process)d TRACE %(name)s %(instance)s log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.863 16855 DEBUG glance.common.config [-] metadata_encryption_key        = **** log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.863 16855 DEBUG glance.common.config [-] owner_is_tenant                = True log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.863 16855 DEBUG glance.common.config [-] publish_errors                 = False log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.863 16855 DEBUG glance.common.config [-] pydev_worker_debug_host        = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.863 16855 DEBUG glance.common.config [-] pydev_worker_debug_port        = 5678 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.863 16855 DEBUG glance.common.config [-] registry_client_ca_file        = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.863 16855 DEBUG glance.common.config [-] registry_client_cert_file      = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.863 16855 DEBUG glance.common.config [-] registry_client_insecure       = False log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.864 16855 DEBUG glance.common.config [-] registry_client_key_file       = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.864 16855 DEBUG glance.common.config [-] registry_client_protocol       = http log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.864 16855 DEBUG glance.common.config [-] registry_client_timeout        = 600 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.864 16855 DEBUG glance.common.config [-] registry_host                  = 0.0.0.0 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.864 16855 DEBUG glance.common.config [-] registry_port                  = 9191 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.864 16855 DEBUG glance.common.config [-] show_image_direct_url          = False log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.864 16855 DEBUG glance.common.config [-] sql_connection                 = *************************************************************** log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.864 16855 DEBUG glance.common.config [-] sql_idle_timeout               = 3600 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.865 16855 DEBUG glance.common.config [-] sql_max_retries                = 60 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.865 16855 DEBUG glance.common.config [-] sql_retry_interval             = 1 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.865 16855 DEBUG glance.common.config [-] syslog_log_facility            = LOG_USER log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.865 16855 DEBUG glance.common.config [-] tcp_keepidle                   = 600 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.865 16855 DEBUG glance.common.config [-] use_stderr                     = True log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.865 16855 DEBUG glance.common.config [-] use_syslog                     = False log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.865 16855 DEBUG glance.common.config [-] verbose                        = False log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.865 16855 DEBUG glance.common.config [-] workers                        = 1 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1446
+2013-07-25 01:20:17.866 16855 DEBUG glance.common.config [-] paste_deploy.config_file       = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.866 16855 DEBUG glance.common.config [-] paste_deploy.flavor            = keystone log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.866 16855 DEBUG glance.common.config [-] keystone_authtoken.admin_password = ******************** log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.866 16855 DEBUG glance.common.config [-] keystone_authtoken.admin_tenant_name = service log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.866 16855 DEBUG glance.common.config [-] keystone_authtoken.admin_token = **** log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.866 16855 DEBUG glance.common.config [-] keystone_authtoken.admin_user  = glance log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.866 16855 DEBUG glance.common.config [-] keystone_authtoken.auth_admin_prefix =  log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.866 16855 DEBUG glance.common.config [-] keystone_authtoken.auth_host   = 129.127.10.133 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.867 16855 DEBUG glance.common.config [-] keystone_authtoken.auth_port   = 35357 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.867 16855 DEBUG glance.common.config [-] keystone_authtoken.auth_protocol = http log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.867 16855 DEBUG glance.common.config [-] keystone_authtoken.auth_uri    = http://129.127.10.133:5000/ log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.867 16855 DEBUG glance.common.config [-] keystone_authtoken.cache       = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.867 16855 DEBUG glance.common.config [-] keystone_authtoken.certfile    = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.867 16855 DEBUG glance.common.config [-] keystone_authtoken.delay_auth_decision = False log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.867 16855 DEBUG glance.common.config [-] keystone_authtoken.http_connect_timeout = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.867 16855 DEBUG glance.common.config [-] keystone_authtoken.keyfile     = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.867 16855 DEBUG glance.common.config [-] keystone_authtoken.memcache_secret_key = **** log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.868 16855 DEBUG glance.common.config [-] keystone_authtoken.memcache_security_strategy = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.868 16855 DEBUG glance.common.config [-] keystone_authtoken.memcache_servers = None log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.868 16855 DEBUG glance.common.config [-] keystone_authtoken.signing_dir = /var/cache/glance/registry log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.868 16855 DEBUG glance.common.config [-] keystone_authtoken.token_cache_time = 300 log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1454
+2013-07-25 01:20:17.868 16855 DEBUG glance.common.config [-] ******************************************************************************** log_opt_values /usr/local/lib/python2.7/dist-packages/oslo/config/cfg.py:1456

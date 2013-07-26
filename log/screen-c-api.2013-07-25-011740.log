@@ -1,0 +1,32 @@
+stack@red:~/devstack$ cd /opt/stack/cinder && /opt/stack/cinder/bin/cinder-api - -config-file /etc/cinder/cinder.conf || touch "/opt/stack/status/stack/c-api.fai lure"
+2013-07-25 01:20:41.203 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mInitializing extension manager.[00m
+2013-07-25 01:20:41.205 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-vol-image-meta[00m
+2013-07-25 01:20:41.205 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-quota-class-sets[00m
+2013-07-25 01:20:41.206 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-hosts[00m
+2013-07-25 01:20:41.207 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-types-extra-specs[00m
+2013-07-25 01:20:41.207 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-extended-snapshot-attributes[00m
+2013-07-25 01:20:41.208 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-vol-host-attr[00m
+2013-07-25 01:20:41.332 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-quota-sets[00m
+2013-07-25 01:20:41.333 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-volume-actions[00m
+2013-07-25 01:20:41.333 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-image-create[00m
+2013-07-25 01:20:41.334 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-services[00m
+2013-07-25 01:20:41.334 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-vol-tenant-attr[00m
+2013-07-25 01:20:41.335 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-types-manage[00m
+2013-07-25 01:20:41.336 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: backups[00m
+2013-07-25 01:20:41.337 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-admin-actions[00m
+2013-07-25 01:20:41.361 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mInitializing extension manager.[00m
+2013-07-25 01:20:41.362 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-vol-image-meta[00m
+2013-07-25 01:20:41.362 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-quota-class-sets[00m
+2013-07-25 01:20:41.362 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-hosts[00m
+2013-07-25 01:20:41.363 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-types-extra-specs[00m
+2013-07-25 01:20:41.363 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-extended-snapshot-attributes[00m
+2013-07-25 01:20:41.363 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-vol-host-attr[00m
+2013-07-25 01:20:41.364 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-quota-sets[00m
+2013-07-25 01:20:41.364 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-volume-actions[00m
+2013-07-25 01:20:41.365 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-image-create[00m
+2013-07-25 01:20:41.365 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-services[00m
+2013-07-25 01:20:41.365 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-vol-tenant-attr[00m
+2013-07-25 01:20:41.366 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-types-manage[00m
+2013-07-25 01:20:41.366 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: backups[00m
+2013-07-25 01:20:41.366 [01;36mAUDIT cinder.api.extensions [[00;36m-[01;36m] [01;35m[01;36mLoaded extension: os-admin-actions[00m
+2013-07-25 01:20:41.429 [00;36mINFO cinder.wsgi [[00;36m-[00;36m] [01;35m[00;36mStarted osapi_volume on 0.0.0.0:8776[00m

@@ -1,0 +1,8 @@
+stack@red:~/devstack$ cd /opt/stack/nova && /opt/stack/nova/bin/nova-novncproxy  --config-file /etc/nova/nova.conf --web /opt/stack/noVNC || touch "/opt/stack/st atus/stack/n-novnc.failure"
+WebSocket server settings:
+  - Listen on 0.0.0.0:6080
+  - Flash security policy server
+  - Web server. Web root: /opt/stack/noVNC
+  - No SSL/TLS support (no cert file)
+  - proxying from 0.0.0.0:6080 to ignore:ignore
+

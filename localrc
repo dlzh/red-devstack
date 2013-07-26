@@ -1,0 +1,9 @@
+OFFLINE=True
+DEST=/opt/stack
+LOGFILE=/home/stack/devstack/log/stack.sh.log
+SCREEN_LOGDIR=/home/stack/devstack/log
+DATABASE_PASSWORD=anhuaxili
+RABBIT_PASSWORD=anhuaxili
+SERVICE_TOKEN=anhuaxili
+SERVICE_PASSWORD=anhuaxili
+ADMIN_PASSWORD=anhuaxili

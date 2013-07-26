@@ -1,0 +1,29 @@
+stack@red:~/devstack$ cd /opt/stack/cinder && /opt/stack/cinder/bin/cinder-volum e --config-file /etc/cinder/cinder.conf || touch "/opt/stack/status/stack/c-vol. failure"
+2013-07-25 00:56:40.088 [00;36mINFO cinder.service [[00;36m-[00;36m] [01;35m[00;36mStarting 1 workers[00m
+2013-07-25 00:56:40.090 [00;36mINFO cinder.service [[00;36m-[00;36m] [01;35m[00;36mStarted child 29316[00m
+2013-07-25 00:56:40.094 [01;36mAUDIT cinder.service [[00;36m-[01;36m] [01;35m[01;36mStarting cinder-volume node (version 2013.1)[00m
+2013-07-25 00:56:40.482 [00;36mINFO cinder.volume.manager [[01;36mreq-7d6dc443-457d-4f16-bf2e-68a71fcd93c0 [00;36mNone None[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 00:56:40.737 [00;36mINFO cinder.openstack.common.rpc.common [[00;36m-[00;36m] [01;35m[00;36mConnected to AMQP server on localhost:5672[00m
+2013-07-25 00:56:40.820 [00;36mINFO cinder.openstack.common.rpc.common [[00;36m-[00;36m] [01;35m[00;36mConnected to AMQP server on localhost:5672[00m
+2013-07-25 00:56:41.764 [00;36mINFO cinder.volume.manager [[01;36mreq-86cd7d2e-327a-4742-9591-8ba3258916ef [00;36mNone None[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 00:56:45.832 [00;36mINFO cinder.volume.manager [[01;36mreq-f9880dca-536c-4476-841d-57405a27eb4f [00;36mNone None[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 00:57:46.010 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 00:58:46.240 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 00:59:46.469 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:00:46.680 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:01:46.910 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:02:47.140 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:03:47.359 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:04:47.573 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:05:47.785 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:06:47.996 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:07:48.208 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:08:48.422 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:09:48.650 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:10:48.879 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:11:49.091 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:12:49.320 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:13:49.532 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:14:49.754 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:15:49.981 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
+2013-07-25 01:16:50.204 [00;36mINFO cinder.volume.manager [[00;36m-[00;36m] [01;35m[00;36mUpdating volume status[00m
